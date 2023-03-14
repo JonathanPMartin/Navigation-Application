@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_6002CEM2.Tests"
+             xmlns:viewmodel="ViewModel:DataPassViewModel"
+             Title="Tests">
+    <VerticalStackLayout>
+        <Entry
+                x:Name="CurrUserId"
+                Placeholder="Enter the User id"
+                Keyboard="Numeric"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+        <Entry
+                x:Name="CurrLocId"
+                Placeholder="Enter the location id"
+                Keyboard="Numeric"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+        <Button
+                x:Name="UpdateLoc"
+                Text="Add Location"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnUpdateLocation"
+                HorizontalOptions="Center" />
+        <Button
+                x:Name="Test2"
+                Text="GetLocation"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnGetLocation"
+                HorizontalOptions="Center" />
+        <Button
+                x:Name="Test3"
+                Text="Update User Location"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnUpdateUser"
+                HorizontalOptions="Center" />
+        <Button
+                x:Name="Test4"
+                Text="Get User's Location"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="GetUserLoc"
+                HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

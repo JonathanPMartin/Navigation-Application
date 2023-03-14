@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="_6002CEM2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:_6002CEM2"
+    Shell.FlyoutBehavior="Disabled">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:LogIn}"
+        Route="MainPage" />
+    <ShellContent
+        Title="Map"
+        ContentTemplate="{DataTemplate local:MapPage}"
+        Route="Map" />
+    <ShellContent
+        Title="Map2"
+        ContentTemplate="{DataTemplate local:Directions}"
+        Route="Map2" />
+    <ShellContent
+        Title="Map3"
+        ContentTemplate="{DataTemplate local:Cal}"
+        Route="Map3" />
+    <ShellContent
+        Title="Register"
+        ContentTemplate="{DataTemplate local:Register}"
+        Route="Register" />
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate local:LogIn}"
+        Route="Login" />
+    <ShellContent
+        Title="Tests"
+        ContentTemplate="{DataTemplate local:Tests}"
+        Route="Tests" />
+
+</Shell>
