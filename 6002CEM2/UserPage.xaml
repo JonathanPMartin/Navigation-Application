@@ -17,7 +17,7 @@
                 HorizontalOptions="Center" />
         <Button Text="{Binding ButtonName}"
                 Command="{Binding LoadCommand}"
-               IsVisible="False","{binding ButtonName}"
+              
                 HorizontalOptions="Center" />
 
 

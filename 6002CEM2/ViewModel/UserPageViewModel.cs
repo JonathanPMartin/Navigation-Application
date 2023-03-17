@@ -7,8 +7,12 @@ namespace _6002CEM2.ViewModel
     [QueryProperty("Id", "Id")]
     public partial class UserPageViewModel: ObservableObject
     {
+        protected async void OnAppearing()
+        {
+            await Load();
+        }
          public UserPageViewModel() {
-          
+            Task.Run(async () => await Load());
         }
         [RelayCommand]
         async Task Load()
