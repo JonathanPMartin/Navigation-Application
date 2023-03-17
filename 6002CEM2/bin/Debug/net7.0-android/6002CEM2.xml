@@ -4,5 +4,29 @@
         <name>6002CEM2</name>
     </assembly>
     <members>
+        <member name="P:_6002CEM2.DataPassViewModel.Id">
+            <inheritdoc cref="F:_6002CEM2.DataPassViewModel.id"/>
+        </member>
+        <member name="P:_6002CEM2.DefultViewModel.Items">
+            <inheritdoc cref="F:_6002CEM2.DefultViewModel.items"/>
+        </member>
+        <member name="P:_6002CEM2.DefultViewModel.Text">
+            <inheritdoc cref="F:_6002CEM2.DefultViewModel.text"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.LogIn2ViewModel.Username">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.LogIn2ViewModel.username"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.LogIn2ViewModel.Password">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.LogIn2ViewModel.password"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.LogIn2ViewModel.Id">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.LogIn2ViewModel.id"/>
+        </member>
+        <member name="F:_6002CEM2.ViewModel.LogIn2ViewModel._addCommand">
+            <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.LogIn2ViewModel.addCommand"/>.</summary>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.LogIn2ViewModel.addCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.LogIn2ViewModel.add"/>.</summary>
+        </member>
     </members>
 </doc>

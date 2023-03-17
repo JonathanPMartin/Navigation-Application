@@ -34,5 +34,9 @@
         Title="Tests"
         ContentTemplate="{DataTemplate local:Tests}"
         Route="Tests" />
+    <ShellContent
+        Title="LogIn2"
+        ContentTemplate="{DataTemplate local:LogIn2}"
+        Route="LogIn2" />
 
 </Shell>

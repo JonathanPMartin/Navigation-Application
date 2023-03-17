@@ -1,16 +1,26 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace _6002CEM2;
-[QueryProperty("ID2", "ID2")]
+
+
+[QueryProperty(nameof(ID), "ID")]
 
 public partial class Tests : ContentPage
 {
-    int ID;
+    string id;
 
-    public Tests(DataPassViewModel vm)
+    int ID;
+    public void ApplyQueryAttributes(IDictionary<string, string> query)
+    {
+        var ID2 = Guid.Parse(query["ID"]);
+        id = ID2.ToString();
+        
+    }
+   
+
+    public Tests()
     {
         InitializeComponent();
-        BindingContext= vm;
     }
 	
 	async private void OnUpdateLocation(object sender, EventArgs e)
@@ -50,7 +60,7 @@ public partial class Tests : ContentPage
     {
         var UserLoc = await SQLService.GetUserLocation(Convert.ToInt32(CurrUserId.Text));
         await DisplayAlert("Alert", UserLoc.Lat.ToString()+ UserLoc.Long.ToString(), "OK");
-        await DisplayAlert("Alert", ID.ToString(), "OK");
+        await DisplayAlert("Alert", id, "OK");
 
     }
 }

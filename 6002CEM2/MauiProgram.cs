@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using _6002CEM2.ViewModel;
+using Microsoft.Extensions.Logging;
 
 namespace _6002CEM2;
 
@@ -21,6 +22,10 @@ public static class MauiProgram
 #endif
 		builder.Services.AddSingleton<Tests>();
 		builder.Services.AddSingleton<DefultViewModel>();
-		return builder.Build();
+		builder.Services.AddSingleton<DataPassViewModel>();
+        builder.Services.AddSingleton<LogIn2ViewModel>();
+        builder.Services.AddSingleton<LogIn2>();
+      
+        return builder.Build();
 	}
 }
