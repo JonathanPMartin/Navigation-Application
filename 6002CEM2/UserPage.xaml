@@ -16,7 +16,7 @@
                
                 HorizontalOptions="Center" />
         <Button Text="{Binding ButtonName}"
-                Command="{Binding LoadCommand}"
+                Command="{Binding GroupLoadCommand}"
               
                 HorizontalOptions="Center" />
 
