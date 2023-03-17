@@ -27,6 +27,7 @@
                 x:Name="LogInBtn"
                 Text="LogIn"
                 SemanticProperties.Hint="Counts the number of times you click"
+ 
                 Command="{Binding addCommand}"
                
                 HorizontalOptions="Center" />

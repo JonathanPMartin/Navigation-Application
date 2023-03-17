@@ -7,8 +7,19 @@
              Title="UserPage">
     <VerticalStackLayout>
         <Label 
-            Text="{Binding Id}"
+            Text="{Binding UserName}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Button Text="Get The Data"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Command="{Binding LoadCommand}"
+               
+                HorizontalOptions="Center" />
+        <Button Text="{Binding ButtonName}"
+                Command="{Binding LoadCommand}"
+               IsVisible="False","{binding ButtonName}"
+                HorizontalOptions="Center" />
+
+
     </VerticalStackLayout>
 </ContentPage>
