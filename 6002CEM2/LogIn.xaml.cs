@@ -11,8 +11,8 @@ public partial class LogIn : ContentPage
     {
         
        
-            string ID=await SQLService.logIn(Username.Text,Password.Text);
-            await DisplayAlert("Alert", "Welcome " + ID, "OK");
+            int ID=await SQLService.logIn(Username.Text,Password.Text);
+            //await DisplayAlert("Alert", "Welcome " + ID, "OK");
         var data = "Tests";
         await Shell.Current.GoToAsync($"///{nameof(Tests)}?ID={ID}");
         Shell.Current.FlyoutBehavior = FlyoutBehavior.Flyout;

@@ -61,9 +61,16 @@ namespace _6002CEM2
                 Loc = Loc,
                 group = -1
             };
-            await db.InsertAsync(user);
+            try
+            {
+                await db.InsertAsync(user);
+            }
+            finally
+            {
+                var useless = 0;
+            }
         }
-        public static async Task<string> logIn(string UserName, string PassWord)
+        public static async Task<int> logIn(string UserName, string PassWord)
         {
             await Init();
          var user=from u in db.Table<Users>()
@@ -72,7 +79,7 @@ namespace _6002CEM2
             var test= await db.Table<Users>().Where(t => t.Username==UserName && t.Password==PassWord).ToListAsync();
 
             var tem = test.FirstOrDefault();
-            return tem.Username;
+            return tem.Id;
            
         }
         public static async Task UpdateuserPassword(int id, string password)

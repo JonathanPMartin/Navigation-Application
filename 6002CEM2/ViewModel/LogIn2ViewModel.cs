@@ -19,8 +19,8 @@ namespace _6002CEM2.ViewModel
         [RelayCommand]
         async void add()
         {
-            string ID = await SQLService.logIn(username, password);
-            
+            int ID = await SQLService.logIn(username, password);
+            await Shell.Current.GoToAsync($"{nameof(UserPage)}?Id={ID}");
         }
     }
 }
