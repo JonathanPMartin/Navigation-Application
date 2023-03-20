@@ -5,14 +5,18 @@ using System.Collections.ObjectModel;
 namespace _6002CEM2.ViewModel
 {
     [QueryProperty("Id", "Id")]
+    [QueryProperty("UserDetails", "UserDetails")]
+    [QueryProperty("Username", "Username")]
+
     public partial class UserPageViewModel: ObservableObject
     {
-        protected async void OnAppearing()
-        {
-            await Load();
-        }
+        
          public UserPageViewModel() {
-            Task.Run(async () => await Load());
+            UserName = "Welcome back" + Username;
+
+            //var username= UserDetails.Username;
+            //UserName = "Welcome back "+ username;
+            //Console.WriteLine(User);
         }
         [RelayCommand]
         async Task Load()
@@ -29,6 +33,7 @@ namespace _6002CEM2.ViewModel
         {
             if (UserGroup < 1)
             {
+                
                 UserName = "you have no Group";
             }
             else
@@ -46,6 +51,10 @@ namespace _6002CEM2.ViewModel
         string userName;
         [ObservableProperty]
         string buttonName;
-        
+        [ObservableProperty]
+        Users userDetails;
+        [ObservableProperty]
+        string username;
+
     }
 }

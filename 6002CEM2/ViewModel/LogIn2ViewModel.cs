@@ -19,8 +19,15 @@ namespace _6002CEM2.ViewModel
         [RelayCommand]
         async void add()
         {
+            //var user = new Users();
             int ID = await SQLService.logIn(username, password);
-            await Shell.Current.GoToAsync($"{nameof(UserPage)}?Id={ID}");
+            var user =await SQLService.GetUser(ID);
+            //user.Username = tem.Username;
+            await Shell.Current.GoToAsync($"{nameof(UserPage)}?Id={ID}&Username={user.Username}&Loc={user.Loc}&Group={user.group}",
+                new Dictionary<string, object>
+                {
+                    ["UserDetails"] = user
+                }); 
         }
     }
 }

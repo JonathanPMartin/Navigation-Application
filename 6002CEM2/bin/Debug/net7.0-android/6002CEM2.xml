@@ -43,6 +43,12 @@
         <member name="P:_6002CEM2.ViewModel.UserPageViewModel.ButtonName">
             <inheritdoc cref="F:_6002CEM2.ViewModel.UserPageViewModel.buttonName"/>
         </member>
+        <member name="P:_6002CEM2.ViewModel.UserPageViewModel.UserDetails">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.UserPageViewModel.userDetails"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.UserPageViewModel.Username">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.UserPageViewModel.username"/>
+        </member>
         <member name="F:_6002CEM2.ViewModel.UserPageViewModel.loadCommand">
             <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.UserPageViewModel.LoadCommand"/>.</summary>
         </member>

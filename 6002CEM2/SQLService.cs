@@ -179,6 +179,7 @@ namespace _6002CEM2
            
         }
     }
+   // [Serializable]
     public class Users
     {
         [PrimaryKey, AutoIncrement]
