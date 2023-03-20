@@ -6,14 +6,24 @@
              x:DataType="viewmodel:LogIn2ViewModel">
              
     <VerticalStackLayout>
+        <Label
+            HorizontalOptions="Center"
+            FontSize="18"
+            Padding="20">
+            LogIn Page
+        </Label>
         <Entry
+                Margin="10"
+                
                 Placeholder="Enter your username"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="18"
                 Text="{Binding Username}"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"
+                />
         <Entry
+                Margin="15"
                 Placeholder="Enter your password"
                 IsPassword="true"
                 SemanticProperties.HeadingLevel="Level2"
@@ -24,6 +34,7 @@
 
 
         <Button
+                Margin="40"
                 x:Name="LogInBtn"
                 Text="LogIn"
                 SemanticProperties.Hint="Counts the number of times you click"

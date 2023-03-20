@@ -6,11 +6,15 @@
              x:DataType="viewmodel:UserPageViewModel"
              Title="UserPage">
     <VerticalStackLayout>
+        
+
         <Label 
             Text="{Binding UserName}"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-       
+            HorizontalOptions="Center"
+            Margin="20"
+            Padding="100"/>
+
         <Button Text="{Binding ButtonName}"
                 Command="{Binding GroupLoadCommand}"
               
