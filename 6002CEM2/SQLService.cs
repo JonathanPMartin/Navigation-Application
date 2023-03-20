@@ -109,6 +109,10 @@ namespace _6002CEM2
             return tem2;
            
         }
+        public static async Task<Locations> GetLocation()
+        {
+
+        }
         public static async Task GetGroupLocation()
         {
 
