@@ -20,14 +20,17 @@ namespace _6002CEM2.ViewModel
         async void add()
         {
             //var user = new Users();
-            int ID = await SQLService.logIn(username, password);
-            var user =await SQLService.GetUser(ID);
+            //int ID = await SQLService.logIn(username, password);
+            //var user =await SQLService.GetUser(ID);
+            var user= await SQLService.LogIn2(username, password);
             //user.Username = tem.Username;
-            await Shell.Current.GoToAsync($"{nameof(UserPage)}?Id={ID}&Username={user.Username}&Loc={user.Loc}&Group={user.group}",
+            await Shell.Current.GoToAsync($"{nameof(UserPage)}",
                 new Dictionary<string, object>
                 {
-                    ["UserDetails"] = user
-                }); 
+                    ["Id"]= user.Id.ToString(),
+                    ["UserDetails"] = user,
+                    ["Username"] = user.Username
+                }) ; 
         }
     }
 }

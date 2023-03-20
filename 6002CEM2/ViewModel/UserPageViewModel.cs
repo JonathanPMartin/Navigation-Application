@@ -12,7 +12,7 @@ namespace _6002CEM2.ViewModel
     {
         
          public UserPageViewModel() {
-            UserName = "Welcome back" + Username;
+            UserName = "Welcome back" + Id;
 
             //var username= UserDetails.Username;
             //UserName = "Welcome back "+ username;
@@ -21,11 +21,20 @@ namespace _6002CEM2.ViewModel
         [RelayCommand]
         async Task Load()
         {
-            var user = await SQLService.GetUser(Int32.Parse(id));
+            var user = await SQLService.GetUser(Int32.Parse(Id));
             //UserGroup = user.group;
             UserGroup = 125;
             UserLocation = user.Loc;
             UserName = "Welcome Back "+user.Username;
+            ButtonName = "Click Here to get group info";
+        }
+        public async void LoadTest()
+        {
+            var user = await SQLService.GetUser(Int32.Parse(Id));
+            //UserGroup = user.group;
+            UserGroup = 125;
+            UserLocation = user.Loc;
+            UserName = "Welcome Back " + user.Username;
             ButtonName = "Click Here to get group info";
         }
         [RelayCommand]

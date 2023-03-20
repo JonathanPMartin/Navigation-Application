@@ -1,8 +1,8 @@
 ﻿
 using Android.Gms.Common.Api.Internal;
 using Android.Util;
-using Java.Lang;
-using Javax.Security.Auth;
+//using Java.Lang;
+//using Javax.Security.Auth;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -81,6 +81,17 @@ namespace _6002CEM2
             var tem = test.FirstOrDefault();
             return tem.Id;
            
+        }
+        public static async Task<Users> LogIn2(string UserName, string PassWord)
+        {
+            await Init();
+            var user = from u in db.Table<Users>()
+                       where u.Username == UserName && u.Password == PassWord
+                       select u;
+            var test = await db.Table<Users>().Where(t => t.Username == UserName && t.Password == PassWord).ToListAsync();
+
+            var tem = test.FirstOrDefault();
+            return tem;
         }
         public static async Task UpdateuserPassword(int id, string password)
         {
