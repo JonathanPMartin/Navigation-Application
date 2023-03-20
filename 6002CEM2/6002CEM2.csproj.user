@@ -8,22 +8,22 @@
     <DefaultDevice>pixel_5_-_api_31</DefaultDevice>
   </PropertyGroup>
   <ItemGroup>
-    <MauiXaml Update="Cal.xaml">
+    <MauiXaml Update="Old Code\Cal.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Directions.xaml">
+    <MauiXaml Update="Old Code\Directions.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="LogIn.xaml">
+    <MauiXaml Update="Old Code\LogIn.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="LogIn2.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Register.xaml">
+    <MauiXaml Update="Old Code\Register.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Tests.xaml">
+    <MauiXaml Update="Old Code\Tests.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="UserPage.xaml">

@@ -22,47 +22,53 @@ build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/Cal.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.Cal.xaml
-build_metadata.AdditionalFiles.TargetPath = Cal.xaml
-build_metadata.AdditionalFiles.RelativePath = Cal.xaml
-
-[C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/Directions.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.Directions.xaml
-build_metadata.AdditionalFiles.TargetPath = Directions.xaml
-build_metadata.AdditionalFiles.RelativePath = Directions.xaml
-
-[C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/LogIn.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.LogIn.xaml
-build_metadata.AdditionalFiles.TargetPath = LogIn.xaml
-build_metadata.AdditionalFiles.RelativePath = LogIn.xaml
-
 [C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/LogIn2.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.LogIn2.xaml
 build_metadata.AdditionalFiles.TargetPath = LogIn2.xaml
 build_metadata.AdditionalFiles.RelativePath = LogIn2.xaml
 
-[C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/MainPage.xaml]
+[C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/Old Code/Cal.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.MainPage.xaml
-build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
-build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.Old_Code.Cal.xaml
+build_metadata.AdditionalFiles.TargetPath = Old Code\Cal.xaml
+build_metadata.AdditionalFiles.RelativePath = Old Code\Cal.xaml
 
-[C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/MapPage.xaml]
+[C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/Old Code/Directions.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.MapPage.xaml
-build_metadata.AdditionalFiles.TargetPath = MapPage.xaml
-build_metadata.AdditionalFiles.RelativePath = MapPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.Old_Code.Directions.xaml
+build_metadata.AdditionalFiles.TargetPath = Old Code\Directions.xaml
+build_metadata.AdditionalFiles.RelativePath = Old Code\Directions.xaml
 
-[C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/Register.xaml]
+[C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/Old Code/LogIn.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.Register.xaml
-build_metadata.AdditionalFiles.TargetPath = Register.xaml
-build_metadata.AdditionalFiles.RelativePath = Register.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.Old_Code.LogIn.xaml
+build_metadata.AdditionalFiles.TargetPath = Old Code\LogIn.xaml
+build_metadata.AdditionalFiles.RelativePath = Old Code\LogIn.xaml
+
+[C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/Old Code/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.Old_Code.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Old Code\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Old Code\MainPage.xaml
+
+[C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/Old Code/MapPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.Old_Code.MapPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Old Code\MapPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Old Code\MapPage.xaml
+
+[C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/Old Code/Register.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.Old_Code.Register.xaml
+build_metadata.AdditionalFiles.TargetPath = Old Code\Register.xaml
+build_metadata.AdditionalFiles.RelativePath = Old Code\Register.xaml
+
+[C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/Old Code/Tests.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.Old_Code.Tests.xaml
+build_metadata.AdditionalFiles.TargetPath = Old Code\Tests.xaml
+build_metadata.AdditionalFiles.RelativePath = Old Code\Tests.xaml
 
 [C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -75,12 +81,6 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
-
-[C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/Tests.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.Tests.xaml
-build_metadata.AdditionalFiles.TargetPath = Tests.xaml
-build_metadata.AdditionalFiles.RelativePath = Tests.xaml
 
 [C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/UserPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

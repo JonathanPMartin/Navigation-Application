@@ -57,25 +57,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Cal.xaml">
+	  <MauiXaml Update="Old Code\Cal.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Directions.xaml">
+	  <MauiXaml Update="Old Code\Directions.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="LogIn.xaml">
+	  <MauiXaml Update="Old Code\LogIn.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="LogIn2.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MapPage.xaml">
+	  <MauiXaml Update="Old Code\MapPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Register.xaml">
+	  <MauiXaml Update="Old Code\Register.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Tests.xaml">
+	  <MauiXaml Update="Old Code\Tests.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="UserPage.xaml">
