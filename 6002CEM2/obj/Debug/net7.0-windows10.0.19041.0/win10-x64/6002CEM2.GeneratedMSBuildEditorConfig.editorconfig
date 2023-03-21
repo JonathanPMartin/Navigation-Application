@@ -34,11 +34,23 @@ build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.GroupSettings.xa
 build_metadata.AdditionalFiles.TargetPath = GroupSettings.xaml
 build_metadata.AdditionalFiles.RelativePath = GroupSettings.xaml
 
+[C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/JoinGroup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.JoinGroup.xaml
+build_metadata.AdditionalFiles.TargetPath = JoinGroup.xaml
+build_metadata.AdditionalFiles.RelativePath = JoinGroup.xaml
+
 [C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/LogIn2.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.LogIn2.xaml
 build_metadata.AdditionalFiles.TargetPath = LogIn2.xaml
 build_metadata.AdditionalFiles.RelativePath = LogIn2.xaml
+
+[C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/MakeGroup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.MakeGroup.xaml
+build_metadata.AdditionalFiles.TargetPath = MakeGroup.xaml
+build_metadata.AdditionalFiles.RelativePath = MakeGroup.xaml
 
 [C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/Old Code/Cal.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

@@ -27,7 +27,12 @@ public static class MauiProgram
         builder.Services.AddSingleton<LogIn2>();
         builder.Services.AddSingleton<UserPage>();
         builder.Services.AddSingleton<UserPageViewModel>();
-
+        builder.Services.AddSingleton<CreateJoinGroupViewModel>();
+        builder.Services.AddSingleton<CreateJoinGroup>();
+        builder.Services.AddSingleton<JoinGroup>();
+        builder.Services.AddSingleton<JoinGroupViewModel>();
+        builder.Services.AddSingleton<MakeGroup>();
+        builder.Services.AddSingleton<MakeGroupViewModel>();
         return builder.Build();
 	}
 }

@@ -22,8 +22,8 @@ namespace _6002CEM2.ViewModel
         async Task Load()
         {
             var user = await SQLService.GetUser(Int32.Parse(Id));
-            //UserGroup = user.group;
-            UserGroup = 125;
+            UserGroup = user.group;
+            //UserGroup = 125;
             UserLocation = user.Loc;
             UserName = "Welcome Back "+user.Username;
             ButtonName = "Click Here to get group info";
@@ -55,12 +55,12 @@ namespace _6002CEM2.ViewModel
         {
             if (UserGroup < 1)
             {
-                
-                UserName = "you have no Group";
+
+                await Shell.Current.GoToAsync($"{nameof(CreateJoinGroup)}?Id={Id}");
             }
             else
             {
-                UserName = UserGroup.ToString();
+                await Shell.Current.GoToAsync($"{nameof(GroupSettings)}?Id={Id}");
             }
         }
        [ObservableProperty]
