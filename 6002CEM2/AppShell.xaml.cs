@@ -1,4 +1,6 @@
-﻿namespace _6002CEM2;
+﻿using _6002CEM2.ViewModel;
+
+namespace _6002CEM2;
 
 public partial class AppShell : Shell
 {
@@ -9,5 +11,8 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(CreateJoinGroup), typeof(CreateJoinGroup));
         Routing.RegisterRoute(nameof(JoinGroup), typeof(JoinGroup));
         Routing.RegisterRoute(nameof(MakeGroup), typeof(MakeGroup));
+        Routing.RegisterRoute(nameof(LogIn2), typeof(LogIn2));
+        Routing.RegisterRoute(nameof(RegisterPage), typeof(RegisterPage));
+        
     }
 }

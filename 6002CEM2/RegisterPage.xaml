@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_6002CEM2.RegisterPage"
+             xmlns:viewmodel="clr-namespace:_6002CEM2.ViewModel"
+             x:DataType="viewmodel:RegisterPageViewModel">
+    <VerticalStackLayout>
+        
+        <Entry
+                x:Name="Username"
+                Text="{Binding Username}"
+                Placeholder="Enter your username"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+        <Entry
+                x:Name="Password"
+                Text="{Binding Password}"
+                Placeholder="Enter your password"
+                IsPassword="true"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+        <Entry
+                x:Name="Password2"
+                Text="{Binding Password2}"
+                Placeholder="repeat your password"
+                IsPassword="true"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+        <Button
+                x:Name="RegisterBtn"
+                Text="Register"
+                Command="{Binding RegisterCommand}"
+                SemanticProperties.Hint="Counts the number of times you click"
+                
+                HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+    
+</ContentPage>

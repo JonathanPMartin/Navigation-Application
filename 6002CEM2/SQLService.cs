@@ -1,4 +1,5 @@
 ﻿
+using Android.Gms.Auth.Api.SignIn.Internal;
 using Android.Gms.Common.Api.Internal;
 using Android.Util;
 //using Java.Lang;
@@ -9,12 +10,13 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 namespace _6002CEM2
 {
-    
+   
     public partial class SQLService
     {
         int UserID = -1;
@@ -39,6 +41,20 @@ namespace _6002CEM2
             };
             await db.InsertAsync(loc);
         }
+        public static string Hash(string pass) {
+           
+            int keySize = 64;
+            int iterations = 32411;
+            byte[] salt = new byte[64];
+            HashAlgorithmName hashAlgorithm = HashAlgorithmName.SHA512;
+            var hash = Rfc2898DeriveBytes.Pbkdf2(
+            Encoding.UTF8.GetBytes(pass),
+            salt,
+            iterations,
+            hashAlgorithm,
+            keySize);
+            return Convert.ToHexString(hash);
+        }
         public static async Task AddGroup(string Name,string Password, int Loc,int owner)
         {
             await Init();
@@ -57,7 +73,7 @@ namespace _6002CEM2
             var user = new Users()
             {
                 Username = UserName,
-                Password = PassWord,
+                Password = Hash(PassWord),
                 Loc = Loc,
                 group = -1
             };
@@ -73,6 +89,7 @@ namespace _6002CEM2
         public static async Task<int> logIn(string UserName, string PassWord)
         {
             await Init();
+            //PassWord = Hash(PassWord);
          var user=from u in db.Table<Users>()
                 where u.Username==UserName && u.Password==PassWord
                 select u;

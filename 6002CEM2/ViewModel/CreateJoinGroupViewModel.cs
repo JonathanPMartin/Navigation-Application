@@ -15,22 +15,23 @@ namespace _6002CEM2.ViewModel
        
         public async void Load()
         {
-            var user = await SQLService.GetUser(Int32.Parse(Id));
+            //var user = await SQLService.GetUser(Int32.Parse(Id));
+            var user = await SQLService.GetUser(Int32.Parse("1"));
             if (user.group > 0)
             {
-                await Shell.Current.GoToAsync($"{nameof(GroupSettings)}?Id={Id}");
+                await Shell.Current.GoToAsync($"{nameof(GroupSettings)}?Id={1}");
             }
 
         }
         [RelayCommand]
         async Task joingroup()
         {
-            await Shell.Current.GoToAsync($"{nameof(JoinGroup)}?Id={Id}");
+            await Shell.Current.GoToAsync($"{nameof(JoinGroup)}?Id={1}");
         }
         [RelayCommand]
         async Task makegroup()
         {
-            await Shell.Current.GoToAsync($"{nameof(MakeGroup)}?Id={Id}");
+            await Shell.Current.GoToAsync($"{nameof(MakeGroup)}?Id={1}");
         }
         [RelayCommand]
         async Task Back()

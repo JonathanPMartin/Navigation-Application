@@ -12,7 +12,8 @@ namespace _6002CEM2.ViewModel
     {
         
          public UserPageViewModel() {
-            UserName = "Welcome back" + Id;
+
+            userName = "Welcome back" + id;
 
             //var username= UserDetails.Username;
             //UserName = "Welcome back "+ username;
@@ -21,16 +22,19 @@ namespace _6002CEM2.ViewModel
         [RelayCommand]
         async Task Load()
         {
-            var user = await SQLService.GetUser(Int32.Parse(Id));
-            UserGroup = user.group;
+            var user = await SQLService.GetUser(Int32.Parse(id));
+            userGroup = user.group;
             //UserGroup = 125;
-            UserLocation = user.Loc;
-            UserName = "Welcome Back "+user.Username;
-            ButtonName = "Click Here to get group info";
+            userLocation = user.Loc;
+            userName = "Welcome Back "+user.Username;
+            buttonName = "Click Here to get group info";
         }
+      
         public async void LoadTest()
         {
-            var user = await SQLService.GetUser(Int32.Parse(Id));
+
+            
+            var user = await SQLService.GetUser(Int32.Parse(id));
             int locID = user.Loc;
             var loc=await SQLService.GetLocation(locID);
             GeolocationRequest request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
@@ -44,23 +48,23 @@ namespace _6002CEM2.ViewModel
             loc.Lat = lat;
             loc.Long = lon;
             await SQLService.UpdateLocation(loc);
-            UserGroup = user.group;
+            userGroup = user.group;
             //UserGroup = 125;
-            UserLocation = user.Loc;
-            UserName = "Welcome Back " + user.Username;
-            ButtonName = "Click Here to get group info";
+            userLocation = user.Loc;
+            userName = "Welcome Back " + user.Username;
+            buttonName = "Click Here to get group info";
         }
         [RelayCommand]
         async Task GroupLoad()
         {
-            if (UserGroup < 1)
+            if (userGroup < 1)
             {
 
-                await Shell.Current.GoToAsync($"{nameof(CreateJoinGroup)}?Id={Id}");
+                await Shell.Current.GoToAsync($"{nameof(CreateJoinGroup)}?Id={id}");
             }
             else
             {
-                await Shell.Current.GoToAsync($"{nameof(GroupSettings)}?Id={Id}");
+                await Shell.Current.GoToAsync($"{nameof(GroupSettings)}?Id={id}");
             }
         }
        [ObservableProperty]
@@ -77,6 +81,6 @@ namespace _6002CEM2.ViewModel
         Users userDetails;
         [ObservableProperty]
         string username;
-
+        private readonly object messagingService;
     }
 }

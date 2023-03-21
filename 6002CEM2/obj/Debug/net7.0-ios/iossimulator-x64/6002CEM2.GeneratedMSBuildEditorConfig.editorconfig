@@ -94,6 +94,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.Old_Code.Tests.x
 build_metadata.AdditionalFiles.TargetPath = Old Code\Tests.xaml
 build_metadata.AdditionalFiles.RelativePath = Old Code\Tests.xaml
 
+[C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/RegisterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.RegisterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = RegisterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = RegisterPage.xaml
+
 [C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.Resources.Styles.Colors.xaml

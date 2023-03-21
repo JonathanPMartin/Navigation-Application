@@ -32,5 +32,10 @@ namespace _6002CEM2.ViewModel
                     ["Username"] = user.Username
                 }) ; 
         }
+        [RelayCommand]
+        async void register()
+        {
+            await Shell.Current.GoToAsync($"{nameof(RegisterPage)}");
+        }
     }
 }
