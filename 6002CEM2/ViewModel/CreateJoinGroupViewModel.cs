@@ -15,8 +15,8 @@ namespace _6002CEM2.ViewModel
        
         public async void Load()
         {
-            //var user = await SQLService.GetUser(Int32.Parse(Id));
-            var user = await SQLService.GetUser(Int32.Parse("1"));
+            var user = await SQLService.GetUser(Int32.Parse(Id));
+            //var user = await SQLService.GetUser(Int32.Parse("1"));
             if (user.group > 0)
             {
                 await Shell.Current.GoToAsync($"{nameof(GroupSettings)}?Id={1}");

@@ -25,7 +25,7 @@ namespace _6002CEM2
         {
             if (db != null)
                 return;
-            var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "myData3  .db");
+            var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "myData4  .db");
              db = new SQLiteAsyncConnection(path);
             await db.CreateTableAsync<Users>();
             await db.CreateTableAsync<Group>();
@@ -138,6 +138,14 @@ namespace _6002CEM2
             var tem=Location.FirstOrDefault();
             var Locationid = tem.Id;
             return Locationid;
+        }
+        public static async Task<int> GetGroupID(string Groupname, string Grouppassword)
+        {
+            await Init();
+            var Location = await db.Table<Group>().Where(t => t.name == Groupname && t.Password == Grouppassword).ToListAsync();
+            var tem = Location.FirstOrDefault();
+            var groupid = tem.Id;
+            return groupid;
         }
         public static async Task UpdateUserLocation(Users user)
         {
