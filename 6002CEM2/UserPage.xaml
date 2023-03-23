@@ -14,11 +14,17 @@
             HorizontalOptions="Center"
             Margin="20"
             Padding="100"/>
+        <Button
+            Text="Load"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Command="{Binding LoadCommand}"/>
 
         <Button Text="{Binding ButtonName}"
                 Command="{Binding GroupLoadCommand}"
               
                 HorizontalOptions="Center" />
+        
 
 
     </VerticalStackLayout>

@@ -23,11 +23,11 @@ namespace _6002CEM2.ViewModel
         async Task Load()
         {
             var user = await SQLService.GetUser(Int32.Parse(id));
-            userGroup = user.group;
+            UserGroup = user.group;
             //UserGroup = 125;
-            userLocation = user.Loc;
-            userName = "Welcome Back "+user.Username;
-            buttonName = "Click Here to get group info";
+            UserLocation = user.Loc;
+            UserName = "Welcome Back "+user.Username;
+            ButtonName = "Click Here to get group info";
         }
       
         public async void LoadTest()
@@ -48,16 +48,16 @@ namespace _6002CEM2.ViewModel
             loc.Lat = lat;
             loc.Long = lon;
             await SQLService.UpdateLocation(loc);
-            userGroup = user.group;
+            UserGroup = user.group;
             //UserGroup = 125;
-            userLocation = user.Loc;
-            userName = "Welcome Back " + user.Username;
-            buttonName = "Click Here to get group info";
+            UserLocation = user.Loc;
+            UserName = "Welcome Back " + user.Username;
+            ButtonName = "Click Here to get group info";
         }
         [RelayCommand]
         async Task GroupLoad()
         {
-            if (userGroup < 1)
+            if (UserGroup < 1)
             {
 
                 await Shell.Current.GoToAsync($"{nameof(CreateJoinGroup)}?Id={id}");

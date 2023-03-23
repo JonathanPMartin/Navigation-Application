@@ -22,7 +22,7 @@ namespace _6002CEM2.ViewModel
         [RelayCommand]
         async void Register()
         {
-            if (password2 == password)
+            if (Password2 == Password)
             {
                 GeolocationRequest request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
                 var _cancelTokenSource = new CancellationTokenSource();
@@ -33,7 +33,7 @@ namespace _6002CEM2.ViewModel
                 var alt = location.Altitude;
                 await SQLService.AddLoc(lon, lat);
                 var LocId = await SQLService.GetLocID(lon, lat);
-                await SQLService.Adduser(username, password, LocId);
+                await SQLService.Adduser(Username, Password, LocId);
                 await Shell.Current.GoToAsync($"{nameof(LogIn2)}");
             }
         }

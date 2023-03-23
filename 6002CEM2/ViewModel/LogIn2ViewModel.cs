@@ -22,7 +22,8 @@ namespace _6002CEM2.ViewModel
             //var user = new Users();
             //int ID = await SQLService.logIn(username, password);
             //var user =await SQLService.GetUser(ID);
-            var user= await SQLService.LogIn2(username, password);
+            string HashPass = SQLService.Hash(Password);
+            var user= await SQLService.LogIn2(Username, HashPass);
             //user.Username = tem.Username;
             await Shell.Current.GoToAsync($"{nameof(UserPage)}",
                 new Dictionary<string, object>
