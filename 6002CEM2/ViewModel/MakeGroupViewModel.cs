@@ -17,9 +17,9 @@ namespace _6002CEM2.ViewModel
         }
         public async void Load()
         {
-            var user = await SQLService.GetUser(Int32.Parse(Id));
+            User = await SQLService.GetUser(Int32.Parse(Id));
             //var user = await SQLService.GetUser(Int32.Parse("1"));
-            if (user.group > 0)
+            if (User.group > 0)
             {
                 await Shell.Current.GoToAsync($"{nameof(GroupSettings)}?Id={Id}");
             }
@@ -41,7 +41,9 @@ namespace _6002CEM2.ViewModel
                 await SQLService.AddLoc(lon, lat);
                 var LocId = await SQLService.GetLocID(lon, lat);
                 await SQLService.AddGroup(GroupName, HashPass, LocId, Int32.Parse(Id));
-
+                int groupID=  await SQLService.GetGroupID(GroupName, HashPass);
+                User.group = groupID;
+                await SQLService.UpdateUser(User);
                 await Shell.Current.GoToAsync($"{nameof(GroupSettings)}?Id={Id}");
             }
         }
@@ -53,6 +55,8 @@ namespace _6002CEM2.ViewModel
         string groupPassword;
         [ObservableProperty]
         string groupPassword2;
+        [ObservableProperty]
+        Users user;
     }
 
 }

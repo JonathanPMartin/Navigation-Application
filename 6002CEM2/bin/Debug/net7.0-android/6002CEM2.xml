@@ -25,6 +25,18 @@
         <member name="P:_6002CEM2.ViewModel.CreateJoinGroupViewModel.BackCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.CreateJoinGroupViewModel.Back"/>.</summary>
         </member>
+        <member name="P:_6002CEM2.ViewModel.GroupSettingsViewModel.Id">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.GroupSettingsViewModel.id"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.GroupSettingsViewModel.Groupname">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.GroupSettingsViewModel.groupname"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.GroupSettingsViewModel.Usergroup">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.GroupSettingsViewModel.usergroup"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.GroupSettingsViewModel.User">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.GroupSettingsViewModel.user"/>
+        </member>
         <member name="P:_6002CEM2.ViewModel.LogIn2ViewModel.Username">
             <inheritdoc cref="F:_6002CEM2.ViewModel.LogIn2ViewModel.username"/>
         </member>
@@ -57,6 +69,9 @@
         </member>
         <member name="P:_6002CEM2.ViewModel.MakeGroupViewModel.GroupPassword2">
             <inheritdoc cref="F:_6002CEM2.ViewModel.MakeGroupViewModel.groupPassword2"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.MakeGroupViewModel.User">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.MakeGroupViewModel.user"/>
         </member>
         <member name="F:_6002CEM2.ViewModel.MakeGroupViewModel._makegroupCommand">
             <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.MakeGroupViewModel.makegroupCommand"/>.</summary>

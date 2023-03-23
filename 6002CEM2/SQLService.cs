@@ -201,8 +201,16 @@ namespace _6002CEM2
             return user;
            
         }
-        
-         public static  async Task Removeuser(int id)
+        public static async Task<Group> GetGroup(int GoupID)
+        {
+            await Init();
+            var users = await db.Table<Group>().Where(t => t.Id == GoupID).ToListAsync();
+            var group = users.FirstOrDefault();
+            return group;
+
+        }
+
+        public static  async Task Removeuser(int id)
         {
             await Init();
             await db.DeleteAsync<Users>(id);
