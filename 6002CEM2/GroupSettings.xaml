@@ -9,5 +9,21 @@
             Text="{Binding Groupname}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Button
+            Text="Calclate Meeting Place"
+             VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Command="{Binding CalMeetingPointCommand}"/>
+        <Button
+            Text="Directions"
+             VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Command="{Binding directionsCommand}"/>
+        <Button
+            Text="Leave Group"
+             VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Command="{Binding leaveGroupCommand}"/>
+        
     </VerticalStackLayout>
 </ContentPage>

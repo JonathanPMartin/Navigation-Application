@@ -172,19 +172,27 @@ namespace _6002CEM2
             double Long= 0;
             double lat= 0;
            var group= await db.Table<Group>().Where(t => t.Id == groupID).ToListAsync();
+            
             for(int i=0; i<group.Count; i++) {
-                var user=await db.Table<Users>().Where(t => t.Id == group[i].Id).ToListAsync();
-                var tem=user.FirstOrDefault();
-                var location=await db.Table<Locations>().Where(t =>t.Id== tem.Loc).ToListAsync();
-                var tem2=location.FirstOrDefault();
-                Long=Long+tem2.Long;
-                lat=lat+tem2.Lat;
+                //var user=await db.Table<Users>().Where(t => t.Id == group[i].Id).ToListAsync();
+                //var tem=user.FirstOrDefault();
+                //var location=await db.Table<Locations>().Where(t =>t.Id== tem.Loc).ToListAsync();
+                //var tem2=location.FirstOrDefault();
+                //Long = Long + tem2.Long;
+                //lat=lat+tem2.Lat;
             }
+            
             lat = lat / group.Count;
             Long= Long/group.Count;
            
             double[] Data = { lat, Long };
             return Data;
+        }
+        public static async Task<List<Users>>GroupMembers(int groupID)
+        {
+            await Init();
+            var group = await db.Table<Users>().Where(t => t.group == groupID).ToListAsync();
+            return group;
         }
        
         public static async Task UpdateLocation(Locations Location)
