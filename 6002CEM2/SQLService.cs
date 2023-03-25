@@ -110,6 +110,13 @@ namespace _6002CEM2
             var tem = test.FirstOrDefault();
             return tem;
         }
+        public static async Task<Group> GroupLogin(string Name, string Password)
+        {
+            await Init();
+            var test= await db.Table<Group>().Where(t => t.name ==Name && t.Password == Password).ToListAsync();
+            var tem = test.FirstOrDefault();
+            return tem;
+        }
         public static async Task UpdateuserPassword(int id, string password)
         {
 
@@ -222,6 +229,16 @@ namespace _6002CEM2
         {
             await Init();
             await db.DeleteAsync<Users>(id);
+        }
+        public static async Task RemoveGroup(int id)
+        {
+            await Init();
+            await db.DeleteAsync<Group>(id);
+        }
+        public static async Task RemoveLocation(int id)
+        {
+            await Init();
+            await db.DeleteAsync<Locations>(id);
         }
         public static async Task<Locations> GetLocation(int id)
         {

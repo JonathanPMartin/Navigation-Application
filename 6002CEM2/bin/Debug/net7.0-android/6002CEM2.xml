@@ -55,6 +55,24 @@
         <member name="P:_6002CEM2.ViewModel.GroupSettingsViewModel.directionsCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.GroupSettingsViewModel.directions"/>.</summary>
         </member>
+        <member name="P:_6002CEM2.ViewModel.JoinGroupViewModel.Groupass">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.JoinGroupViewModel.groupass"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.JoinGroupViewModel.Groupname">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.JoinGroupViewModel.groupname"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.JoinGroupViewModel.Id">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.JoinGroupViewModel.id"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.JoinGroupViewModel.User">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.JoinGroupViewModel.user"/>
+        </member>
+        <member name="F:_6002CEM2.ViewModel.JoinGroupViewModel._addCommand">
+            <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.JoinGroupViewModel.addCommand"/>.</summary>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.JoinGroupViewModel.addCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.JoinGroupViewModel.add"/>.</summary>
+        </member>
         <member name="P:_6002CEM2.ViewModel.LogIn2ViewModel.Username">
             <inheritdoc cref="F:_6002CEM2.ViewModel.LogIn2ViewModel.username"/>
         </member>

@@ -58,10 +58,25 @@ namespace _6002CEM2.ViewModel
             //if it is the owner who leaves, deletes the whole group
             if (Usergroup.owner == User.Id)
             {
-                //owner of the group
-            }else
-            {
+                var members = await SQLService.GroupMembers(Usergroup.Id);
+                if (members.Count > 1)
+                {
 
+                }
+                else
+                {
+                    await SQLService.RemoveGroup(Usergroup.Id);
+                    await SQLService.RemoveLocation(Usergroup.Loc);
+                    User.group = -1;
+                    await SQLService.UpdateUser(User);
+                    await Shell.Current.GoToAsync($"{nameof(CreateJoinGroup)}?Id={id}");
+                }
+            }
+            else
+            {
+                User.group = -1;
+                await SQLService.UpdateUser(User);
+                await Shell.Current.GoToAsync($"{nameof(CreateJoinGroup)}?Id={id}");
             }
         }
         [RelayCommand]
