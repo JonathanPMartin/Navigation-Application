@@ -38,6 +38,12 @@ namespace _6002CEM2.ViewModel
         {
             await Shell.Current.GoToAsync("..");
         }
+        [RelayCommand]
+        async void GoHome()
+        {
+            await Shell.Current.GoToAsync($"{nameof(UserPage)}?Id={Id}");
+        }
+      
         [ObservableProperty]
         string id;
        

@@ -25,6 +25,12 @@
         <member name="P:_6002CEM2.ViewModel.CreateJoinGroupViewModel.BackCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.CreateJoinGroupViewModel.Back"/>.</summary>
         </member>
+        <member name="F:_6002CEM2.ViewModel.CreateJoinGroupViewModel.goHomeCommand">
+            <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.CreateJoinGroupViewModel.GoHomeCommand"/>.</summary>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.CreateJoinGroupViewModel.GoHomeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.CreateJoinGroupViewModel.GoHome"/>.</summary>
+        </member>
         <member name="P:_6002CEM2.ViewModel.GroupSettingsViewModel.Id">
             <inheritdoc cref="F:_6002CEM2.ViewModel.GroupSettingsViewModel.id"/>
         </member>
@@ -115,6 +121,18 @@
         <member name="P:_6002CEM2.ViewModel.MakeGroupViewModel.makegroupCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.MakeGroupViewModel.makegroup"/>.</summary>
         </member>
+        <member name="F:_6002CEM2.ViewModel.MakeGroupViewModel.goHomeCommand">
+            <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.MakeGroupViewModel.GoHomeCommand"/>.</summary>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.MakeGroupViewModel.GoHomeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.MakeGroupViewModel.GoHome"/>.</summary>
+        </member>
+        <member name="F:_6002CEM2.ViewModel.MakeGroupViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.MakeGroupViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.MakeGroupViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.MakeGroupViewModel.GoBack"/>.</summary>
+        </member>
         <member name="P:_6002CEM2.ViewModel.RegisterPageViewModel.Username">
             <inheritdoc cref="F:_6002CEM2.ViewModel.RegisterPageViewModel.username"/>
         </member>
@@ -162,6 +180,18 @@
         </member>
         <member name="P:_6002CEM2.ViewModel.UserPageViewModel.GroupLoadCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.UserPageViewModel.GroupLoad"/>.</summary>
+        </member>
+        <member name="F:_6002CEM2.ViewModel.UserPageViewModel.goHomeCommand">
+            <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.UserPageViewModel.GoHomeCommand"/>.</summary>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.UserPageViewModel.GoHomeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.UserPageViewModel.GoHome"/>.</summary>
+        </member>
+        <member name="F:_6002CEM2.ViewModel.UserPageViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.UserPageViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.UserPageViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.UserPageViewModel.GoBack"/>.</summary>
         </member>
         <member name="P:_6002CEM2.DataPassViewModel.Id">
             <inheritdoc cref="F:_6002CEM2.DataPassViewModel.id"/>
