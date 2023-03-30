@@ -90,6 +90,16 @@ namespace _6002CEM2.ViewModel
 
             await Launcher.OpenAsync(query);
         }
+        [RelayCommand]
+        async void GoHome()
+        {
+            await Shell.Current.GoToAsync($"{nameof(UserPage)}?Id={Id}");
+        }
+        [RelayCommand]
+        async void GoBack()
+        {
+            await Shell.Current.GoToAsync("..");
+        }
         [ObservableProperty]
         string id;
         [ObservableProperty]

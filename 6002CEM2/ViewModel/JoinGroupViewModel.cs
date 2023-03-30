@@ -38,6 +38,15 @@ namespace _6002CEM2.ViewModel
             await Shell.Current.GoToAsync($"{nameof(GroupSettings)}?Id={Id}");
               
         }
-
+        [RelayCommand]
+        async void GoHome()
+        {
+            await Shell.Current.GoToAsync($"{nameof(UserPage)}?Id={Id}");
+        }
+        [RelayCommand]
+        async void GoBack()
+        {
+            await Shell.Current.GoToAsync("..");
+        }
     }
 }
