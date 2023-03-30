@@ -8,10 +8,10 @@ namespace _6002CEM2.ViewModel
     [QueryProperty("UserDetails", "UserDetails")]
     [QueryProperty("Username", "Username")]
 
-    public partial class UserPageViewModel: ObservableObject
+    public partial class UserPageViewModel : ObservableObject
     {
-        
-         public UserPageViewModel() {
+
+        public UserPageViewModel() {
 
             userName = "Welcome back" + id;
 
@@ -19,6 +19,7 @@ namespace _6002CEM2.ViewModel
             //UserName = "Welcome back "+ username;
             //Console.WriteLine(User);
         }
+       
         [RelayCommand]
         async Task Load()
         {
@@ -26,17 +27,17 @@ namespace _6002CEM2.ViewModel
             UserGroup = user.group;
             //UserGroup = 125;
             UserLocation = user.Loc;
-            UserName = "Welcome Back "+user.Username;
+            UserName = "Welcome Back " + user.Username;
             ButtonName = "Click Here to get group info";
         }
-      
+
         public async void LoadTest()
         {
 
-            
+
             var user = await SQLService.GetUser(Int32.Parse(id));
             int locID = user.Loc;
-            var loc=await SQLService.GetLocation(locID);
+            var loc = await SQLService.GetLocation(locID);
             GeolocationRequest request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
 
             var _cancelTokenSource = new CancellationTokenSource();
@@ -77,6 +78,11 @@ namespace _6002CEM2.ViewModel
         {
             await Shell.Current.GoToAsync("..");
         }
+        [RelayCommand]
+        async void GoSettigns()
+        {
+            await Shell.Current.GoToAsync($"{nameof(Settings)}?Id={Id}");
+        }
         [ObservableProperty]
         string id;
         [ObservableProperty]
@@ -91,6 +97,7 @@ namespace _6002CEM2.ViewModel
         Users userDetails;
         [ObservableProperty]
         string username;
-        private readonly object messagingService;
     }
-}
+    
+    }
+

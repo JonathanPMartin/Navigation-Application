@@ -19,7 +19,25 @@
                 Command="{Binding GroupLoadCommand}"
               
                 HorizontalOptions="Center" />
-        
+        <Button
+                Margin="40"
+                Text="Home"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Command="{Binding GoHomeCommand}"
+                HorizontalOptions="Center" />
+        <Button
+                Margin="40"
+                Text="Back"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Command="{Binding GoBackCommand}"
+                HorizontalOptions="Center" />
+        <Button
+                Margin="40"
+                Text="Settings"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Command="{Binding GoSettignsCommand}"
+                HorizontalOptions="Center" />
+
 
 
     </VerticalStackLayout>
