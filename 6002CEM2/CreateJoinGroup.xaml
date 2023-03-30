@@ -24,6 +24,12 @@
             Margin="90"
             Command="{Binding joingroupCommand}"/>
         <Button
+                Margin="40"
+                Text="Home"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Command="{Binding GoHomeCommand}"
+                HorizontalOptions="Center" />
+        <Button
             Text="go Back"
              HorizontalOptions="Center"
             FontSize="18"

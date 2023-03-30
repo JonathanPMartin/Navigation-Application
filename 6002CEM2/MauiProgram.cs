@@ -39,8 +39,8 @@ public static class MauiProgram
         builder.Services.AddSingleton<GroupSettingsViewModel>();
         builder.Services.AddSingleton<JoinGroup>();
         builder.Services.AddSingleton<JoinGroupViewModel>();
-
-
+        builder.Services.AddSingleton<Settings>();
+        builder.Services.AddSingleton<SettingsViewModel>();
         return builder.Build();
 	}
 }
