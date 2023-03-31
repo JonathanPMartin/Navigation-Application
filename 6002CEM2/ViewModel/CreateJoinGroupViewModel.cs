@@ -28,6 +28,8 @@ namespace _6002CEM2.ViewModel
                
             }
             Backgroundcolour = Color.FromRgba(Colour);
+            //data 
+            //more data that does shit
 
         }
         [RelayCommand]
@@ -72,6 +74,34 @@ namespace _6002CEM2.ViewModel
         Color backgroundcolour;
         [ObservableProperty]
         string colour;
+        //data 
+        //data 
+        //data 
+        //data 
+        //more data that does shit  //data 
+        //data 
+        //data 
+        //data 
+        //data 
+        //data 
+        //data 
+        //data 
+        //more data that does shit  //data 
+        //data 
+        //data 
+        //more data that does shit
+        //more data that does shit
+        //more data that does shit
+        //more data that does shit
+        //more data that does shit
+        //more data that does shit
+        //more data that does shit
+        //more data that does shit
+        //more data that does shit
+        //more data that does shit
+        //more data that does shit
+        //more data that does shit
+        //more data that does shit
     }
-    
+
 }
