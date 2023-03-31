@@ -30,7 +30,8 @@ namespace _6002CEM2.ViewModel
                 {
                     ["Id"]= user.Id.ToString(),
                     ["UserDetails"] = user,
-                    ["Username"] = user.Username
+                    ["Username"] = user.Username,
+                    ["Colour"] ="#000000"
                 }) ; 
         }
         [RelayCommand]

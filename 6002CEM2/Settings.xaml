@@ -6,12 +6,25 @@
              x:DataType="viewmodel:SettingsViewModel"
              >
     <VerticalStackLayout
-        BackgroundColor="{Binding Colour}">
+        BackgroundColor="{Binding Backgroundcolour}">
         <Label 
             Text="{Binding Colour}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Button Text="WORK DAM YOU" 
-                Command="{Binding ChangeColourCommand}"/>
+        <Button Text="Change Theme" 
+                Command="{Binding ChangeColourCommand}" 
+                HorizontalOptions="Center" />
+        <Button
+                Margin="40"
+                Text="Home"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Command="{Binding GoHomeCommand}"
+                HorizontalOptions="Center" />
+        <Button
+            Text="go Back"
+             HorizontalOptions="Center"
+            FontSize="18"
+            Margin="40"
+            Command="{Binding GoBackCommand}"/>
     </VerticalStackLayout>
 </ContentPage>

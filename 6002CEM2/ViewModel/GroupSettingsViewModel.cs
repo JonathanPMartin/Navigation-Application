@@ -13,6 +13,7 @@ using static SQLite.SQLite3;
 namespace _6002CEM2.ViewModel
 {
     [QueryProperty("Id", "Id")]
+    [QueryProperty("Colour", "Colour")]
     public partial class GroupSettingsViewModel : ObservableObject
     {
         public async void Load()
@@ -21,6 +22,7 @@ namespace _6002CEM2.ViewModel
             //var user = await SQLService.GetUser(Int32.Parse("1"));
             Usergroup = await SQLService.GetGroup(User.group);
             Groupname = "You are currently a member of: "+Usergroup.name;
+            Backgroundcolour = Color.FromRgba(Colour);
 
         }
         [RelayCommand]
@@ -69,14 +71,24 @@ namespace _6002CEM2.ViewModel
                     await SQLService.RemoveLocation(Usergroup.Loc);
                     User.group = -1;
                     await SQLService.UpdateUser(User);
-                    await Shell.Current.GoToAsync($"{nameof(CreateJoinGroup)}?Id={id}");
+                    await Shell.Current.GoToAsync($"{nameof(CreateJoinGroup)}?Id={Id}",
+                new Dictionary<string, object>
+                {
+                   
+                    ["Colour"] = Colour
+                });
                 }
             }
             else
             {
                 User.group = -1;
                 await SQLService.UpdateUser(User);
-                await Shell.Current.GoToAsync($"{nameof(CreateJoinGroup)}?Id={id}");
+                await Shell.Current.GoToAsync($"{nameof(CreateJoinGroup)}?Id={Id}",
+                new Dictionary<string, object>
+                {
+                   
+                    ["Colour"] = Colour
+                });
             }
         }
         [RelayCommand]
@@ -93,7 +105,12 @@ namespace _6002CEM2.ViewModel
         [RelayCommand]
         async void GoHome()
         {
-            await Shell.Current.GoToAsync($"{nameof(UserPage)}?Id={Id}");
+            await Shell.Current.GoToAsync($"{nameof(UserPage)}?Id={Id}",
+                new Dictionary<string, object>
+                {
+                   
+                    ["Colour"] = Colour
+                });
         }
         [RelayCommand]
         async void GoBack()
@@ -108,5 +125,9 @@ namespace _6002CEM2.ViewModel
         Group usergroup;
         [ObservableProperty]
         Users user;
+        [ObservableProperty]
+        string colour;
+        [ObservableProperty]
+        Color backgroundcolour;
     }
 }

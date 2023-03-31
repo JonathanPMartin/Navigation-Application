@@ -4,7 +4,7 @@
              x:Class="_6002CEM2.JoinGroup"
              xmlns:viewmodel="clr-namespace:_6002CEM2.ViewModel"
              x:DataType="viewmodel:JoinGroupViewModel">
-    <VerticalStackLayout>
+    <VerticalStackLayout  BackgroundColor="{Binding Backgroundcolour}">
         <Entry
                 Margin="10"
                 

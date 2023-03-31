@@ -4,7 +4,7 @@
              x:Class="_6002CEM2.GroupSettings"
              xmlns:viewmodel="clr-namespace:_6002CEM2.ViewModel"
              x:DataType="viewmodel:GroupSettingsViewModel">
-    <VerticalStackLayout>
+    <VerticalStackLayout BackgroundColor="{Binding Backgroundcolour}">
         <Label 
             Text="{Binding Groupname}"
             VerticalOptions="Center" 

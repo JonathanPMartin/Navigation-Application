@@ -7,6 +7,7 @@ namespace _6002CEM2.ViewModel
     [QueryProperty("Id", "Id")]
     [QueryProperty("UserDetails", "UserDetails")]
     [QueryProperty("Username", "Username")]
+    [QueryProperty("Colour", "Colour")]
 
     public partial class UserPageViewModel : ObservableObject
     {
@@ -28,7 +29,7 @@ namespace _6002CEM2.ViewModel
             //UserGroup = 125;
             UserLocation = user.Loc;
             UserName = "Welcome Back " + user.Username;
-            ButtonName = "Click Here to get group info";
+            ButtonName = Colour;
         }
 
         public async void LoadTest()
@@ -39,7 +40,7 @@ namespace _6002CEM2.ViewModel
             int locID = user.Loc;
             var loc = await SQLService.GetLocation(locID);
             GeolocationRequest request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
-
+            Backgroundcolour = Color.FromRgba(colour);
             var _cancelTokenSource = new CancellationTokenSource();
 
             Location location = await Geolocation.Default.GetLocationAsync(request, _cancelTokenSource.Token);
@@ -53,7 +54,7 @@ namespace _6002CEM2.ViewModel
             //UserGroup = 125;
             UserLocation = user.Loc;
             UserName = "Welcome Back " + user.Username;
-            ButtonName = "Click Here to get group info";
+            ButtonName = Colour;
         }
         [RelayCommand]
         async Task GroupLoad()
@@ -61,17 +62,32 @@ namespace _6002CEM2.ViewModel
             if (UserGroup < 1)
             {
 
-                await Shell.Current.GoToAsync($"{nameof(CreateJoinGroup)}?Id={id}");
+                await Shell.Current.GoToAsync($"{nameof(CreateJoinGroup)}?Id={Id}",
+                new Dictionary<string, object>
+                {
+                  
+                    ["Colour"] = Colour
+                });
             }
             else
             {
-                await Shell.Current.GoToAsync($"{nameof(GroupSettings)}?Id={id}");
+                await Shell.Current.GoToAsync($"{nameof(GroupSettings)}?Id={Id}",
+                new Dictionary<string, object>
+                {
+                    
+                    ["Colour"] = Colour
+                });
             }
         }
         [RelayCommand]
         async void GoHome()
         {
-            await Shell.Current.GoToAsync($"{nameof(UserPage)}?Id={Id}");
+            await Shell.Current.GoToAsync($"{nameof(UserPage)}?Id={Id}",
+                new Dictionary<string, object>
+                {
+                   
+                    ["Colour"] = Colour
+                });
         }
         [RelayCommand]
         async void GoBack()
@@ -81,7 +97,12 @@ namespace _6002CEM2.ViewModel
         [RelayCommand]
         async void GoSettigns()
         {
-            await Shell.Current.GoToAsync($"{nameof(Settings)}?Id={Id}");
+            await Shell.Current.GoToAsync($"{nameof(Settings)}?Id={Id}",
+                new Dictionary<string, object>
+                {
+                   
+                    ["Colour"] = Colour
+                });
         }
         [ObservableProperty]
         string id;
@@ -97,6 +118,10 @@ namespace _6002CEM2.ViewModel
         Users userDetails;
         [ObservableProperty]
         string username;
+        [ObservableProperty]
+        string colour;
+        [ObservableProperty]
+        Color backgroundcolour;
     }
     
     }

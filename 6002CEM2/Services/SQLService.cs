@@ -19,7 +19,7 @@ namespace _6002CEM2
    
     public partial class SQLService
     {
-        int UserID = -1;
+        //int UserID = -1;
         static SQLiteAsyncConnection db;
         static async Task Init()
         {

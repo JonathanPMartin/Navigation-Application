@@ -4,7 +4,7 @@
              x:Class="_6002CEM2.CreateJoinGroup"
              xmlns:viewmodel="clr-namespace:_6002CEM2.ViewModel"
              x:DataType="viewmodel:CreateJoinGroupViewModel">
-    <VerticalStackLayout>
+    <VerticalStackLayout  BackgroundColor="{Binding Backgroundcolour}">
         <Label
             Text="You Have No Group Your options Are:"
             HorizontalOptions="Center"

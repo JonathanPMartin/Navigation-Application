@@ -7,6 +7,12 @@
         <member name="P:_6002CEM2.ViewModel.CreateJoinGroupViewModel.Id">
             <inheritdoc cref="F:_6002CEM2.ViewModel.CreateJoinGroupViewModel.id"/>
         </member>
+        <member name="P:_6002CEM2.ViewModel.CreateJoinGroupViewModel.Backgroundcolour">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.CreateJoinGroupViewModel.backgroundcolour"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.CreateJoinGroupViewModel.Colour">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.CreateJoinGroupViewModel.colour"/>
+        </member>
         <member name="F:_6002CEM2.ViewModel.CreateJoinGroupViewModel._joingroupCommand">
             <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.CreateJoinGroupViewModel.joingroupCommand"/>.</summary>
         </member>
@@ -42,6 +48,12 @@
         </member>
         <member name="P:_6002CEM2.ViewModel.GroupSettingsViewModel.User">
             <inheritdoc cref="F:_6002CEM2.ViewModel.GroupSettingsViewModel.user"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.GroupSettingsViewModel.Colour">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.GroupSettingsViewModel.colour"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.GroupSettingsViewModel.Backgroundcolour">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.GroupSettingsViewModel.backgroundcolour"/>
         </member>
         <member name="F:_6002CEM2.ViewModel.GroupSettingsViewModel.calMeetingPointCommand">
             <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.GroupSettingsViewModel.CalMeetingPointCommand"/>.</summary>
@@ -84,6 +96,12 @@
         </member>
         <member name="P:_6002CEM2.ViewModel.JoinGroupViewModel.User">
             <inheritdoc cref="F:_6002CEM2.ViewModel.JoinGroupViewModel.user"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.JoinGroupViewModel.Colour">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.JoinGroupViewModel.colour"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.JoinGroupViewModel.Backgroundcolour">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.JoinGroupViewModel.backgroundcolour"/>
         </member>
         <member name="F:_6002CEM2.ViewModel.JoinGroupViewModel._addCommand">
             <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.JoinGroupViewModel.addCommand"/>.</summary>
@@ -139,6 +157,12 @@
         <member name="P:_6002CEM2.ViewModel.MakeGroupViewModel.User">
             <inheritdoc cref="F:_6002CEM2.ViewModel.MakeGroupViewModel.user"/>
         </member>
+        <member name="P:_6002CEM2.ViewModel.MakeGroupViewModel.Colour">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.MakeGroupViewModel.colour"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.MakeGroupViewModel.Backgroundcolour">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.MakeGroupViewModel.backgroundcolour"/>
+        </member>
         <member name="F:_6002CEM2.ViewModel.MakeGroupViewModel._makegroupCommand">
             <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.MakeGroupViewModel.makegroupCommand"/>.</summary>
         </member>
@@ -172,17 +196,41 @@
         <member name="P:_6002CEM2.ViewModel.RegisterPageViewModel.RegisterCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.RegisterPageViewModel.Register"/>.</summary>
         </member>
+        <member name="P:_6002CEM2.ViewModel.SettingsViewModel.Id">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.SettingsViewModel.id"/>
+        </member>
         <member name="P:_6002CEM2.ViewModel.SettingsViewModel.Colour">
             <inheritdoc cref="F:_6002CEM2.ViewModel.SettingsViewModel.colour"/>
         </member>
-        <member name="P:_6002CEM2.ViewModel.SettingsViewModel.Label">
-            <inheritdoc cref="F:_6002CEM2.ViewModel.SettingsViewModel.label"/>
+        <member name="P:_6002CEM2.ViewModel.SettingsViewModel.Labelname">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.SettingsViewModel.labelname"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.SettingsViewModel.Backgroundcolour">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.SettingsViewModel.backgroundcolour"/>
         </member>
         <member name="F:_6002CEM2.ViewModel.SettingsViewModel.changeColourCommand">
             <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.SettingsViewModel.ChangeColourCommand"/>.</summary>
         </member>
         <member name="P:_6002CEM2.ViewModel.SettingsViewModel.ChangeColourCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.SettingsViewModel.ChangeColour"/>.</summary>
+        </member>
+        <member name="F:_6002CEM2.ViewModel.SettingsViewModel.goHomeCommand">
+            <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.SettingsViewModel.GoHomeCommand"/>.</summary>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.SettingsViewModel.GoHomeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.SettingsViewModel.GoHome"/>.</summary>
+        </member>
+        <member name="F:_6002CEM2.ViewModel.SettingsViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.SettingsViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.SettingsViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.SettingsViewModel.GoBack"/>.</summary>
+        </member>
+        <member name="F:_6002CEM2.ViewModel.SettingsViewModel.goSettignsCommand">
+            <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.SettingsViewModel.GoSettignsCommand"/>.</summary>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.SettingsViewModel.GoSettignsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.SettingsViewModel.GoSettigns"/>.</summary>
         </member>
         <member name="P:_6002CEM2.ViewModel.UserPageViewModel.Id">
             <inheritdoc cref="F:_6002CEM2.ViewModel.UserPageViewModel.id"/>
@@ -204,6 +252,12 @@
         </member>
         <member name="P:_6002CEM2.ViewModel.UserPageViewModel.Username">
             <inheritdoc cref="F:_6002CEM2.ViewModel.UserPageViewModel.username"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.UserPageViewModel.Colour">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.UserPageViewModel.colour"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.UserPageViewModel.Backgroundcolour">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.UserPageViewModel.backgroundcolour"/>
         </member>
         <member name="F:_6002CEM2.ViewModel.UserPageViewModel.loadCommand">
             <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.UserPageViewModel.LoadCommand"/>.</summary>

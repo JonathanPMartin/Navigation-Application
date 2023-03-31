@@ -4,7 +4,7 @@
              x:Class="_6002CEM2.MakeGroup"
              xmlns:viewmodel="clr-namespace:_6002CEM2.ViewModel"
              x:DataType="viewmodel:MakeGroupViewModel">
-    <VerticalStackLayout>
+    <VerticalStackLayout  BackgroundColor="{Binding Backgroundcolour}">
         <Label 
             Text="Make A New Group"
             VerticalOptions="Center" 

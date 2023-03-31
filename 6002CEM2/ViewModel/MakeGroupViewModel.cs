@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 namespace _6002CEM2.ViewModel
 {
     [QueryProperty("Id", "Id")]
+    [QueryProperty("Colour", "Colour")]
     public partial class MakeGroupViewModel : ObservableObject
     {
         public MakeGroupViewModel()
@@ -21,9 +22,14 @@ namespace _6002CEM2.ViewModel
             //var user = await SQLService.GetUser(Int32.Parse("1"));
             if (User.group > 0)
             {
-                await Shell.Current.GoToAsync($"{nameof(GroupSettings)}?Id={Id}");
+                await Shell.Current.GoToAsync($"{nameof(GroupSettings)}?Id={Id}",
+                new Dictionary<string, object>
+                {
+                   
+                    ["Colour"] = Colour
+                });
             }
-
+            Backgroundcolour = Color.FromRgba(Colour);
         }
         [RelayCommand]
         async void makegroup()
@@ -44,13 +50,23 @@ namespace _6002CEM2.ViewModel
                 int groupID=  await SQLService.GetGroupID(GroupName, HashPass);
                 User.group = groupID;
                 await SQLService.UpdateUser(User);
-                await Shell.Current.GoToAsync($"{nameof(GroupSettings)}?Id={Id}");
+                await Shell.Current.GoToAsync($"{nameof(GroupSettings)}?Id={Id}",
+                new Dictionary<string, object>
+                {
+                   
+                    ["Colour"] = Colour
+                });
             }
         }
         [RelayCommand]
         async void GoHome()
         {
-            await Shell.Current.GoToAsync($"{nameof(UserPage)}?Id={Id}");
+            await Shell.Current.GoToAsync($"{nameof(UserPage)}?Id={Id}",
+                new Dictionary<string, object>
+                {
+                   
+                    ["Colour"] = Colour
+                });
         }
         [RelayCommand]
         async void GoBack()
@@ -67,6 +83,10 @@ namespace _6002CEM2.ViewModel
         string groupPassword2;
         [ObservableProperty]
         Users user;
+        [ObservableProperty]
+        string colour;
+        [ObservableProperty]
+        Color backgroundcolour;
     }
 
 }
