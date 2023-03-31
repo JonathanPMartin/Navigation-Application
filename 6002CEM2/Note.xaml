@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_6002CEM2.Note"
+            xmlns:viewmodel="clr-namespace:_6002CEM2.ViewModel"
+             x:DataType="viewmodel:NoteViewModel"
+             >
+    <VerticalStackLayout BackgroundColor="{Binding Backgroundcolour}">
+        <Entry
+                x:Name="Username"
+                Text="{Binding Usernote}"
+                Placeholder="Enter your Note"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+        <Button
+                x:Name="RegisterBtn"
+                Text="Alter Note"
+                Command="{Binding chnageCommand}"
+                SemanticProperties.Hint="Counts the number of times you click"
+                
+                HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

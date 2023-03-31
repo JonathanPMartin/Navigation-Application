@@ -6,24 +6,35 @@
              x:DataType="viewmodel:UserPageViewModel"
              Title="UserPage">
     <VerticalStackLayout  BackgroundColor="{Binding Backgroundcolour}">
-        
-
+       
         <Label 
             Text="{Binding UserName}"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
+            Padding="80"/>
+        <Label 
+            Text="{Binding Usernote}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
             Margin="20"
-            Padding="100"/>
+            Padding="5"
+           />
 
         <Button Text="Group Settings"
                 Command="{Binding GroupLoadCommand}"
               
                 HorizontalOptions="Center" />
         <Button
-                Margin="40"
+                Margin="25"
                 Text="Home"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Command="{Binding GoHomeCommand}"
+                HorizontalOptions="Center" />
+        <Button
+                Margin="40"
+                Text="Add/Change Note"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Command="{Binding SetNoteCommand}"
                 HorizontalOptions="Center" />
         <Button
                 Margin="40"

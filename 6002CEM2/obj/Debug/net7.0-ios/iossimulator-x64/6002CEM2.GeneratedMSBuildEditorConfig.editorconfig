@@ -52,6 +52,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.MakeGroup.xaml
 build_metadata.AdditionalFiles.TargetPath = MakeGroup.xaml
 build_metadata.AdditionalFiles.RelativePath = MakeGroup.xaml
 
+[C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/Note.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.Note.xaml
+build_metadata.AdditionalFiles.TargetPath = Note.xaml
+build_metadata.AdditionalFiles.RelativePath = Note.xaml
+
 [C:/Users/jonat_9q9ejg2/Source/Repos/6002CEM2/6002CEM2/Old Code/Cal.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _6002CEM2.Old_Code.Cal.xaml

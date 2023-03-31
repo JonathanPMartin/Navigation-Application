@@ -101,6 +101,9 @@
 	  <MauiXaml Update="MakeGroup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Note.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Old Code\Cal.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

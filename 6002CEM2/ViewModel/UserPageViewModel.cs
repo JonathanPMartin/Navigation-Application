@@ -29,6 +29,7 @@ namespace _6002CEM2.ViewModel
             //UserGroup = 125;
             UserLocation = user.Loc;
             UserName = "Welcome Back " + user.Username;
+            //Note="User Note: "+user.Note;
             ButtonName = Colour;
         }
 
@@ -55,6 +56,7 @@ namespace _6002CEM2.ViewModel
             UserLocation = user.Loc;
             UserName = "Welcome Back " + user.Username;
             ButtonName = Colour;
+            Usernote = "User Note: " + user.Note;
         }
         [RelayCommand]
         async Task GroupLoad()
@@ -104,6 +106,16 @@ namespace _6002CEM2.ViewModel
                     ["Colour"] = Colour
                 });
         }
+        [RelayCommand]
+        async void SetNote()
+        {
+            await Shell.Current.GoToAsync($"{nameof(Note)}?Id={Id}",
+                new Dictionary<string, object>
+                {
+
+                    ["Colour"] = Colour
+                });
+        }
         [ObservableProperty]
         string id;
         [ObservableProperty]
@@ -122,6 +134,8 @@ namespace _6002CEM2.ViewModel
         string colour;
         [ObservableProperty]
         Color backgroundcolour;
+        [ObservableProperty]
+        string usernote;
     }
     
     }

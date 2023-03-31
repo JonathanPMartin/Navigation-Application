@@ -20,6 +20,9 @@
     <MauiXaml Update="MakeGroup.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Note.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Old Code\Cal.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

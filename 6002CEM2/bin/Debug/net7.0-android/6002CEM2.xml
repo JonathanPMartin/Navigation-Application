@@ -181,6 +181,27 @@
         <member name="P:_6002CEM2.ViewModel.MakeGroupViewModel.GoBackCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.MakeGroupViewModel.GoBack"/>.</summary>
         </member>
+        <member name="P:_6002CEM2.ViewModel.NoteViewModel.Id">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.NoteViewModel.id"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.NoteViewModel.Colour">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.NoteViewModel.colour"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.NoteViewModel.Backgroundcolour">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.NoteViewModel.backgroundcolour"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.NoteViewModel.User">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.NoteViewModel.user"/>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.NoteViewModel.Usernote">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.NoteViewModel.usernote"/>
+        </member>
+        <member name="F:_6002CEM2.ViewModel.NoteViewModel._chnageCommand">
+            <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.NoteViewModel.chnageCommand"/>.</summary>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.NoteViewModel.chnageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.NoteViewModel.chnage"/>.</summary>
+        </member>
         <member name="P:_6002CEM2.ViewModel.RegisterPageViewModel.Username">
             <inheritdoc cref="F:_6002CEM2.ViewModel.RegisterPageViewModel.username"/>
         </member>
@@ -259,6 +280,9 @@
         <member name="P:_6002CEM2.ViewModel.UserPageViewModel.Backgroundcolour">
             <inheritdoc cref="F:_6002CEM2.ViewModel.UserPageViewModel.backgroundcolour"/>
         </member>
+        <member name="P:_6002CEM2.ViewModel.UserPageViewModel.Usernote">
+            <inheritdoc cref="F:_6002CEM2.ViewModel.UserPageViewModel.usernote"/>
+        </member>
         <member name="F:_6002CEM2.ViewModel.UserPageViewModel.loadCommand">
             <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.UserPageViewModel.LoadCommand"/>.</summary>
         </member>
@@ -288,6 +312,12 @@
         </member>
         <member name="P:_6002CEM2.ViewModel.UserPageViewModel.GoSettignsCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.UserPageViewModel.GoSettigns"/>.</summary>
+        </member>
+        <member name="F:_6002CEM2.ViewModel.UserPageViewModel.setNoteCommand">
+            <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.UserPageViewModel.SetNoteCommand"/>.</summary>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.UserPageViewModel.SetNoteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.UserPageViewModel.SetNote"/>.</summary>
         </member>
         <member name="P:_6002CEM2.DataPassViewModel.Id">
             <inheritdoc cref="F:_6002CEM2.DataPassViewModel.id"/>
