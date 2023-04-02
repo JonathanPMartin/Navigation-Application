@@ -99,12 +99,14 @@ namespace _6002CEM2.ViewModel
         [RelayCommand]
         async void GoSettigns()
         {
-            await Shell.Current.GoToAsync($"{nameof(Settings)}?Id={Id}",
+            await Shell.Current.GoToAsync($"{nameof(Test)}");
+            /*await Shell.Current.GoToAsync($"{nameof(Settings)}?Id={Id}",
                 new Dictionary<string, object>
                 {
                    
                     ["Colour"] = Colour
                 });
+            */
         }
         [RelayCommand]
         async void SetNote()

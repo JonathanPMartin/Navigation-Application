@@ -9,6 +9,35 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor"
+                        Value="Gray"/>
+                <Setter Property="Margin"
+                        Value="2"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="TextColor"
+                        Value="DimGrey"/>
+            </Style>
+            <Style TargetType="Grid">
+                <Setter Property="ColumnSpacing"
+                        Value="20"/>
+            </Style>
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor"
+                        Value="Transparent"/>
+                <Setter Property="BorderColor"
+                        Value="White"/>
+                <Setter Property="Padding"
+                        Value="1"/>
+            </Style>
+            <Style TargetType="Button" Class="Nav">
+                <Setter Property="BackgroundColor"
+                        Value="PaleGreen"/>
+                <Setter Property="FontAutoScalingEnabled"
+                        Value="True"/>
+            </Style>
         </ResourceDictionary>
+       
     </Application.Resources>
 </Application>

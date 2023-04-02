@@ -47,6 +47,9 @@
     <MauiXaml Update="Settings.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Test.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="UserPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

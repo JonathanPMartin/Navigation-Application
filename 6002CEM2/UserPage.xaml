@@ -5,6 +5,34 @@
              xmlns:viewmodel="clr-namespace:_6002CEM2.ViewModel"
              x:DataType="viewmodel:UserPageViewModel"
              Title="UserPage">
+    <Frame>
+        <Grid BackgroundColor="{Binding Backgroundcolour}"
+              ColumnDefinitions="*,*,*"
+       
+         RowDefinitions="10,30,40,40,40,40,40,40,40"
+        RowSpacing="30">
+            <Label   Grid.Column="1"  Grid.ColumnSpan="2" Grid.Row="1" Text="{Binding UserName}"/>
+            <Label  Grid.Column="1" Grid.ColumnSpan="2"
+                    Grid.RowSpan="2" Grid.Row="2" Text="{Binding Usernote}"/>
+            <Button Text="Group"
+                Command="{Binding GroupLoadCommand}"
+                Grid.Row="4"
+                Grid.Column="1"
+                 HorizontalOptions="Center" />
+            <Button
+                 Grid.Row="6"
+                 Grid.Column="1" 
+                Text="Notes"
+                Command="{Binding SetNoteCommand}"
+                />
+            <Button
+                Grid.Row="8"
+                Grid.Column="1" 
+                Text="Logout"/>
+
+        </Grid>
+    </Frame>
+    <!--
     <VerticalStackLayout  BackgroundColor="{Binding Backgroundcolour}">
        
         <Label 
@@ -19,7 +47,7 @@
             Margin="20"
             Padding="5"
            />
-
+        
         <Button Text="Group Settings"
                 Command="{Binding GroupLoadCommand}"
               
@@ -52,4 +80,5 @@
 
 
     </VerticalStackLayout>
+    -->
 </ContentPage>
