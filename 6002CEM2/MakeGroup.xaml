@@ -4,6 +4,29 @@
              x:Class="_6002CEM2.MakeGroup"
              xmlns:viewmodel="clr-namespace:_6002CEM2.ViewModel"
              x:DataType="viewmodel:MakeGroupViewModel">
+    <Frame>
+        <Grid BackgroundColor="{Binding Backgroundcolour}">
+            <Label Text="Make New Group" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"/>
+            <Entry  Text="{Binding GroupName}"
+                Placeholder="Group Name:"
+                    Grid.Column="1" Grid.Row="3"/>
+            <Entry   Text="{Binding GroupPassword}"
+                Placeholder="Group Pass:"
+                     Grid.Column="1" Grid.Row="4"/>
+            <Entry  Text="{Binding GroupPassword2}"
+                Placeholder="Repeat Pass:" Grid.Column="1" Grid.Row="5"/>
+            <Button Text="Done" Grid.Column="1" Grid.Row="7" Command="{Binding makegroupCommand}"/>
+            <Button Text="Back" class="Nav" Grid.Row="10"
+                     Command="{Binding GoBackCommand}"></Button>
+            <Button Text="Home" class="Nav" Grid.Row="10" Grid.Column="1"
+                    Command="{Binding GoHomeCommand}"></Button>
+            <Button Text="Settings" class="Nav" Grid.Row="10" Grid.Column="2"
+                    Command="{Binding GoSettignsCommand}"></Button>
+
+
+        </Grid>
+    </Frame>
+    <!--
     <VerticalStackLayout  BackgroundColor="{Binding Backgroundcolour}">
         <Label 
             Text="Make A New Group"
@@ -53,4 +76,5 @@
                 HorizontalOptions="Center" />
 
     </VerticalStackLayout>
+    -->
 </ContentPage>

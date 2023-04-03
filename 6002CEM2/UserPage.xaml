@@ -6,11 +6,7 @@
              x:DataType="viewmodel:UserPageViewModel"
              Title="UserPage">
     <Frame>
-        <Grid BackgroundColor="{Binding Backgroundcolour}"
-              ColumnDefinitions="*,*,*"
-       
-         RowDefinitions="10,30,40,40,40,40,40,40,40"
-        RowSpacing="30">
+        <Grid BackgroundColor="{Binding Backgroundcolour}">
             <Label   Grid.Column="1"  Grid.ColumnSpan="2" Grid.Row="1" Text="{Binding UserName}"/>
             <Label  Grid.Column="1" Grid.ColumnSpan="2"
                     Grid.RowSpan="2" Grid.Row="2" Text="{Binding Usernote}"/>
@@ -28,57 +24,16 @@
             <Button
                 Grid.Row="8"
                 Grid.Column="1" 
-                Text="Logout"/>
+                Text="Logout"
+                 Command="{Binding GoLogoutCommand}"/>
+            <Button Text="Back" class="Nav" Grid.Row="10"
+                     Command="{Binding GoBackCommand}"></Button>
+            <Button Text="Home" class="Nav" Grid.Row="10" Grid.Column="1"
+                    Command="{Binding GoHomeCommand}"></Button>
+            <Button Text="Settings" class="Nav" Grid.Row="10" Grid.Column="2"
+                    Command="{Binding GoSettignsCommand}"></Button>
 
         </Grid>
     </Frame>
-    <!--
-    <VerticalStackLayout  BackgroundColor="{Binding Backgroundcolour}">
-       
-        <Label 
-            Text="{Binding UserName}"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            Padding="80"/>
-        <Label 
-            Text="{Binding Usernote}"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            Margin="20"
-            Padding="5"
-           />
-        
-        <Button Text="Group Settings"
-                Command="{Binding GroupLoadCommand}"
-              
-                HorizontalOptions="Center" />
-        <Button
-                Margin="25"
-                Text="Home"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Command="{Binding GoHomeCommand}"
-                HorizontalOptions="Center" />
-        <Button
-                Margin="40"
-                Text="Add/Change Note"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Command="{Binding SetNoteCommand}"
-                HorizontalOptions="Center" />
-        <Button
-                Margin="40"
-                Text="Back"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Command="{Binding GoBackCommand}"
-                HorizontalOptions="Center" />
-        <Button
-                Margin="40"
-                Text="Settings"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Command="{Binding GoSettignsCommand}"
-                HorizontalOptions="Center" />
-
-
-
-    </VerticalStackLayout>
-    -->
+  
 </ContentPage>

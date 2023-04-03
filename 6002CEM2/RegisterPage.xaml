@@ -4,42 +4,18 @@
              x:Class="_6002CEM2.RegisterPage"
              xmlns:viewmodel="clr-namespace:_6002CEM2.ViewModel"
              x:DataType="viewmodel:RegisterPageViewModel">
-    <VerticalStackLayout>
-        
-        <Entry
-                x:Name="Username"
-                Text="{Binding Username}"
-                Placeholder="Enter your username"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-        <Entry
-                x:Name="Password"
-                Text="{Binding Password}"
-                Placeholder="Enter your password"
-                IsPassword="true"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-        <Entry
-                x:Name="Password2"
-                Text="{Binding Password2}"
-                Placeholder="repeat your password"
-                IsPassword="true"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-        <Button
-                x:Name="RegisterBtn"
-                Text="Register"
-                Command="{Binding RegisterCommand}"
-                SemanticProperties.Hint="Counts the number of times you click"
-                
-                HorizontalOptions="Center" />
+    <Frame>
+        <Grid>
+            <Label Text="Register Page" Grid.Column="1" Grid.Row="2"></Label>
+            
+            <Entry  Text="{Binding Username}" Grid.Column="1" Grid.Row="3"
+                     Placeholder="Enter name:"></Entry>
+            <Entry  Text="{Binding Password}" Grid.Column="1" Grid.Row="4"
+                     Placeholder="Enter Pass:"></Entry>
+            <Entry  Text="{Binding Password2}" Grid.Column="1" Grid.Row="5"
+                     Placeholder="Repeat Pass:"></Entry>
+            <Button class="Nav" Text="Register" Grid.Column="1" Grid.Row="7"  Command="{Binding RegisterCommand}"></Button>
+        </Grid>
+    </Frame>
 
-    </VerticalStackLayout>
-    
 </ContentPage>

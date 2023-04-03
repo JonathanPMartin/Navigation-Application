@@ -53,21 +53,38 @@ namespace _6002CEM2.ViewModel
                 });
         }
         [RelayCommand]
-        async Task Back()
-        {
-            await Shell.Current.GoToAsync("..");
-        }
-        [RelayCommand]
         async void GoHome()
         {
             await Shell.Current.GoToAsync($"{nameof(UserPage)}?Id={Id}",
                 new Dictionary<string, object>
                 {
-                    
+
                     ["Colour"] = Colour
                 });
         }
-      
+        [RelayCommand]
+        async void GoBack()
+        {
+            await Shell.Current.GoToAsync("..",
+                new Dictionary<string, object>
+                {
+                    ["Id"]=Id,
+                    ["Colour"] = Colour
+                }); ;
+        }
+        [RelayCommand]
+        async void GoSettigns()
+        {
+
+            await Shell.Current.GoToAsync($"{nameof(Settings)}?Id={Id}",
+                new Dictionary<string, object>
+                {
+
+                    ["Colour"] = Colour
+                });
+
+        }
+
         [ObservableProperty]
         string id;
         [ObservableProperty]

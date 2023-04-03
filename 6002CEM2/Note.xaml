@@ -5,21 +5,17 @@
             xmlns:viewmodel="clr-namespace:_6002CEM2.ViewModel"
              x:DataType="viewmodel:NoteViewModel"
              >
-    <VerticalStackLayout BackgroundColor="{Binding Backgroundcolour}">
-        <Entry
-                x:Name="Username"
-                Text="{Binding Usernote}"
-                Placeholder="Enter your Note"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-        <Button
-                x:Name="RegisterBtn"
-                Text="Alter Note"
-                Command="{Binding chnageCommand}"
-                SemanticProperties.Hint="Counts the number of times you click"
-                
-                HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Frame>
+        <Grid BackgroundColor="{Binding Backgroundcolour}">
+            <Entry  Placeholder="Enter Note:" Grid.Column="1" Grid.Row="3"  Text="{Binding Usernote}"></Entry>
+            <Button Text="Done" Grid.Row="5" Grid.Column="1" Command="{Binding chnageCommand}"></Button>
+            <Button Text="Back" class="Nav" Grid.Row="10"
+                     Command="{Binding GoBackCommand}"></Button>
+            <Button Text="Home" class="Nav" Grid.Row="10" Grid.Column="1"
+                    Command="{Binding GoHomeCommand}"></Button>
+            <Button Text="Settings" class="Nav" Grid.Row="10" Grid.Column="2"
+                    Command="{Binding GoSettignsCommand}"></Button>
+        </Grid>
+    </Frame>
+    
 </ContentPage>

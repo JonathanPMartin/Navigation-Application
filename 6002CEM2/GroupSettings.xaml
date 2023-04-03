@@ -4,38 +4,19 @@
              x:Class="_6002CEM2.GroupSettings"
              xmlns:viewmodel="clr-namespace:_6002CEM2.ViewModel"
              x:DataType="viewmodel:GroupSettingsViewModel">
-    <VerticalStackLayout BackgroundColor="{Binding Backgroundcolour}">
-        <Label 
-            Text="{Binding Groupname}"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Button
-            Text="Calclate Meeting Place"
-             VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            Command="{Binding CalMeetingPointCommand}"/>
-        <Button
-            Text="Directions"
-             VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            Command="{Binding directionsCommand}"/>
-        <Button
-            Text="Leave Group"
-             VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            Command="{Binding leaveGroupCommand}"/>
-        <Button
-                Margin="40"
-                Text="Home"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Command="{Binding GoHomeCommand}"
-                HorizontalOptions="Center" />
-        <Button
-                Margin="40"
-                Text="Back"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Command="{Binding GoBackCommand}"
-                HorizontalOptions="Center" />
-
-    </VerticalStackLayout>
+    <Frame>
+        <Grid BackgroundColor="{Binding Backgroundcolour}">
+            <Label Text="{Binding Groupname}" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+            <Button Text="Cal Loc" Grid.Column="1" Grid.Row="4" Command="{Binding CalMeetingPointCommand}"/>
+            <Button Text="Directions"  Grid.Column="1" Grid.Row="5"  Command="{Binding directionsCommand}"/>
+            <Button Text="Leave" Grid.Column="1" Grid.Row="6" Command="{Binding leaveGroupCommand}"/>
+            <Button Text="Back" class="Nav" Grid.Row="10"
+                     Command="{Binding GoBackCommand}"></Button>
+            <Button Text="Home" class="Nav" Grid.Row="10" Grid.Column="1"
+                    Command="{Binding GoHomeCommand}"></Button>
+            <Button Text="Settings" class="Nav" Grid.Row="10" Grid.Column="2"
+                    Command="{Binding GoSettignsCommand}"></Button>
+        </Grid>
+    </Frame>
+   
 </ContentPage>

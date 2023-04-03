@@ -40,6 +40,7 @@ namespace _6002CEM2.ViewModel
             string HashPass = SQLService.Hash(Groupass);
             var group = await SQLService.GroupLogin(Groupname, HashPass);
             User.group= group.Id;
+            await SQLService.UpdateUser(User);
             //user.Username = tem.Username;
             await Shell.Current.GoToAsync($"{nameof(GroupSettings)}?Id={Id}",
                 new Dictionary<string, object>
@@ -47,6 +48,7 @@ namespace _6002CEM2.ViewModel
        
                     ["Colour"] = Colour
                 });
+            
 
         }
         [RelayCommand]
@@ -55,14 +57,31 @@ namespace _6002CEM2.ViewModel
             await Shell.Current.GoToAsync($"{nameof(UserPage)}?Id={Id}",
                 new Dictionary<string, object>
                 {
-                   
+
                     ["Colour"] = Colour
                 });
         }
         [RelayCommand]
         async void GoBack()
         {
-            await Shell.Current.GoToAsync("..");
+            await Shell.Current.GoToAsync("..",
+                new Dictionary<string, object>
+                {
+                    ["Id"] = Id,
+                    ["Colour"] = Colour
+                }); ;
+        }
+        [RelayCommand]
+        async void GoSettigns()
+        {
+
+            await Shell.Current.GoToAsync($"{nameof(Settings)}?Id={Id}",
+                new Dictionary<string, object>
+                {
+
+                    ["Colour"] = Colour
+                });
+
         }
     }
 }

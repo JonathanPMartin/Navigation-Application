@@ -4,36 +4,19 @@
              x:Class="_6002CEM2.CreateJoinGroup"
              xmlns:viewmodel="clr-namespace:_6002CEM2.ViewModel"
              x:DataType="viewmodel:CreateJoinGroupViewModel">
-    <VerticalStackLayout  BackgroundColor="{Binding Backgroundcolour}">
-        <Label
-            Text="You Have No Group Your options Are:"
-            HorizontalOptions="Center"
-            FontSize="18"
-            Padding="-10,40"
-            />
-        <Button
-            Text="Create Group"
-             HorizontalOptions="Center"
-            FontSize="18"
-            Margin="40"
-            Command="{Binding makegroupCommand}"/>
-        <Button
-            Text="Join Group"
-             HorizontalOptions="Center"
-            FontSize="18"
-            Margin="90"
-            Command="{Binding joingroupCommand}"/>
-        <Button
-                Margin="40"
-                Text="Home"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Command="{Binding GoHomeCommand}"
-                HorizontalOptions="Center" />
-        <Button
-            Text="go Back"
-             HorizontalOptions="Center"
-            FontSize="18"
-            Margin="40"
-            Command="{Binding BackCommand}"/>
-    </VerticalStackLayout>
+    <Frame>
+        <Grid BackgroundColor="{Binding Backgroundcolour}">
+            <Label Text="You Have No Group Your options Are:" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="2"></Label>
+            <Button Text="Create one" Grid.Column="1" Grid.Row="4" Command="{Binding makegroupCommand}"/>
+            <Button Text="Join One" Grid.Column="1" Grid.Row="5" Command="{Binding joingroupCommand}"/>
+            <Button Text="Back" class="Nav" Grid.Row="10"
+                     Command="{Binding GoBackCommand}"></Button>
+            <Button Text="Home" class="Nav" Grid.Row="10" Grid.Column="1"
+                    Command="{Binding GoHomeCommand}"></Button>
+            <Button Text="Settings" class="Nav" Grid.Row="10" Grid.Column="2"
+                    Command="{Binding GoSettignsCommand}"></Button>
+
+        </Grid>
+    </Frame>
+    
 </ContentPage>

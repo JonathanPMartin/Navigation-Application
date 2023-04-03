@@ -4,52 +4,45 @@
              x:Class="_6002CEM2.LogIn2"
               xmlns:viewmodel="clr-namespace:_6002CEM2.ViewModel"
              x:DataType="viewmodel:LogIn2ViewModel">
-             
-    <VerticalStackLayout>
-        <Label
-            HorizontalOptions="Center"
-            FontSize="18"
-            Padding="20">
-            LogIn Page
-        </Label>
-        <Entry
-                Margin="10"
-                
-                Placeholder="Enter your username"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
+
+    <Frame>
+        <Grid>
+            <Label Text="Login Page"
+                   Grid.Column="1"
+                   Grid.Row="2"/>
+        
+           
+            <Entry
                 Text="{Binding Username}"
-                HorizontalOptions="Center"
+                 Grid.Row="4"
+                Grid.Column="1"
+                
+                 Placeholder="username:"
                 />
-        <Entry
-                Margin="15"
-                Placeholder="Enter your password"
-                IsPassword="true"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
+            
+            <Entry
                 Text="{Binding Password}"
-                HorizontalOptions="Center" />
+                 Grid.Row="5"
+                Grid.Column="1"
+                
+                 Placeholder="Password:"
+                />
+         
+            <Button Text="Login"
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    Command="{Binding addCommand}"
+                    class="Nav"/>
+            <Button Text="New User?"
+                    Grid.Row="7"
+                    Grid.Column="1"
+                    Command="{Binding registerCommand}"
+                    class="Nav"/>
 
 
-        <Button
-                Margin="40"
-                Text="LogIn"
-                SemanticProperties.Hint="Counts the number of times you click"
- 
-                Command="{Binding addCommand}"
-               
-                HorizontalOptions="Center" />
 
-        <Button
-                Margin="40"
-                Text="New User?"
-                SemanticProperties.Hint="Counts the number of times you click"
- 
-                Command="{Binding registerCommand}"
-               
-                HorizontalOptions="Center" />
 
-    </VerticalStackLayout>
+        </Grid>
+    </Frame>
+
 </ContentPage>

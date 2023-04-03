@@ -94,19 +94,24 @@ namespace _6002CEM2.ViewModel
         [RelayCommand]
         async void GoBack()
         {
-            await Shell.Current.GoToAsync("..");
+            await Shell.Current.GoToAsync("..",
+                new Dictionary<string, object>
+                {
+                    ["Id"] = Id,
+                    ["Colour"] = Colour
+                }); ;
         }
         [RelayCommand]
         async void GoSettigns()
         {
-            await Shell.Current.GoToAsync($"{nameof(Test)}");
-            /*await Shell.Current.GoToAsync($"{nameof(Settings)}?Id={Id}",
+           
+            await Shell.Current.GoToAsync($"{nameof(Settings)}?Id={Id}",
                 new Dictionary<string, object>
                 {
                    
                     ["Colour"] = Colour
                 });
-            */
+            
         }
         [RelayCommand]
         async void SetNote()
@@ -117,6 +122,18 @@ namespace _6002CEM2.ViewModel
 
                     ["Colour"] = Colour
                 });
+        }
+        [RelayCommand]
+        async void GoLogout()
+        {
+            await Shell.Current.GoToAsync($"{nameof(LogIn2)}");
+            /*await Shell.Current.GoToAsync($"{nameof(Settings)}?Id={Id}",
+                new Dictionary<string, object>
+                {
+                   
+                    ["Colour"] = Colour
+                });
+            */
         }
         [ObservableProperty]
         string id;

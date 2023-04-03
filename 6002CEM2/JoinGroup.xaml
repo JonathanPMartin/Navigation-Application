@@ -4,6 +4,22 @@
              x:Class="_6002CEM2.JoinGroup"
              xmlns:viewmodel="clr-namespace:_6002CEM2.ViewModel"
              x:DataType="viewmodel:JoinGroupViewModel">
+
+    <Frame>
+        <Grid BackgroundColor="{Binding Backgroundcolour}">
+            <Label Text="Group Details:" Grid.Column="1" Grid.Row="1"></Label>
+            <Entry  Text="{Binding Groupname}" Placeholder="Name:" Grid.Column="1" Grid.Row="2"/>
+            <Entry  Text="{Binding Groupass}" Placeholder="Pass:" Grid.Column="1" Grid.Row="3" IsPassword="True"/>
+            <Button Text="Join" Grid.Column="1" Grid.Row="5" Command="{Binding addCommand}"/>
+            <Button Text="Back" class="Nav" Grid.Row="10"
+                     Command="{Binding GoBackCommand}"></Button>
+            <Button Text="Home" class="Nav" Grid.Row="10" Grid.Column="1"
+                    Command="{Binding GoHomeCommand}"></Button>
+            <Button Text="Settings" class="Nav" Grid.Row="10" Grid.Column="2"
+                    Command="{Binding GoSettignsCommand}"></Button>
+        </Grid>
+    </Frame>  
+  <!--  
     <VerticalStackLayout  BackgroundColor="{Binding Backgroundcolour}">
         <Entry
                 Margin="10"
@@ -46,5 +62,7 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Command="{Binding GoBackCommand}"
                 HorizontalOptions="Center" />
+   
     </VerticalStackLayout>
+    -->
 </ContentPage>

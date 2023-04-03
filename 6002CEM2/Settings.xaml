@@ -5,26 +5,16 @@
              xmlns:viewmodel="clr-namespace:_6002CEM2.ViewModel"
              x:DataType="viewmodel:SettingsViewModel"
              >
-    <VerticalStackLayout
-        BackgroundColor="{Binding Backgroundcolour}">
-        <Label 
-            Text="{Binding Colour}"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Button Text="Change Theme" 
-                Command="{Binding ChangeColourCommand}" 
-                HorizontalOptions="Center" />
-        <Button
-                Margin="40"
-                Text="Home"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Command="{Binding GoHomeCommand}"
-                HorizontalOptions="Center" />
-        <Button
-            Text="go Back"
-             HorizontalOptions="Center"
-            FontSize="18"
-            Margin="40"
-            Command="{Binding GoBackCommand}"/>
-    </VerticalStackLayout>
+    <Frame>
+        <Grid  BackgroundColor="{Binding Backgroundcolour}">
+            <Label Text="{Binding Colour}" Grid.Column="1" Grid.Row="1"></Label>
+            <Button Text="Theme" Grid.Column="1" Grid.Row="4" Command="{Binding ChangeColourCommand}" />
+            <Button Text="Back" class="Nav" Grid.Row="10"
+                     Command="{Binding GoBackCommand}"></Button>
+            <Button Text="Home" class="Nav" Grid.Row="10" Grid.Column="1"
+                    Command="{Binding GoHomeCommand}"></Button>
+            <Button Text="Settings" class="Nav" Grid.Row="10" Grid.Column="2"
+                    Command="{Binding GoSettignsCommand}"></Button>
+        </Grid>
+    </Frame>
 </ContentPage>
