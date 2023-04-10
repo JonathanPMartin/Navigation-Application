@@ -5,15 +5,17 @@
              xmlns:viewmodel="clr-namespace:_6002CEM2.ViewModel"
              x:DataType="viewmodel:RegisterPageViewModel">
     <Frame>
-        <Grid>
+        <Grid BackgroundColor="black">
             <Label Text="Register Page" Grid.Column="1" Grid.Row="2"></Label>
             
             <Entry  Text="{Binding Username}" Grid.Column="1" Grid.Row="3"
                      Placeholder="Enter name:"></Entry>
             <Entry  Text="{Binding Password}" Grid.Column="1" Grid.Row="4"
-                     Placeholder="Enter Pass:"></Entry>
+                     Placeholder="Enter Pass:"
+                    IsPassword="True"></Entry>
             <Entry  Text="{Binding Password2}" Grid.Column="1" Grid.Row="5"
-                     Placeholder="Repeat Pass:"></Entry>
+                     Placeholder="Repeat Pass:"
+                    IsPassword="True"></Entry>
             <Button class="Nav" Text="Register" Grid.Column="1" Grid.Row="7"  Command="{Binding RegisterCommand}"></Button>
         </Grid>
     </Frame>

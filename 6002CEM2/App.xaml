@@ -19,23 +19,28 @@
                 <Setter Property="TextColor"
                         Value="DimGrey"/>
             </Style>
+            <Style TargetType="Entry">
+                <Setter Property="TextColor"
+                        Value="DimGrey"/>
+               
+            </Style>
             <Style TargetType="Grid">
                 <Setter Property="ColumnSpacing"
                         Value="20"/>
                 <Setter Property="ColumnDefinitions"
                         Value="*,*,*"/>
                 <Setter Property="RowDefinitions"
-                        Value="10,30,40,40,40,40,40,40,40,80,40"/>
+                        Value="10,30,40,40,40,40,40,40,40,60,40"/>
                 <Setter Property="RowSpacing"
                         Value="30"/>
             </Style>
             <Style TargetType="Frame">
                 <Setter Property="BackgroundColor"
-                        Value="Transparent"/>
+                        Value="gold"/>
                 <Setter Property="BorderColor"
                         Value="Gold"/>
                 <Setter Property="Padding"
-                        Value="3"/>
+                        Value="6"/>
             </Style>
             <Style TargetType="Button" Class="Nav">
                 <Setter Property="BackgroundColor"

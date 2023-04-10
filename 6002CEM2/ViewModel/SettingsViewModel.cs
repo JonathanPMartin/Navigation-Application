@@ -1,6 +1,7 @@
-﻿using Android.Database.Sqlite;
+﻿//using Android.Database.Sqlite;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Plugin.Maui.Audio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,17 @@ namespace _6002CEM2.ViewModel
     [QueryProperty("Colour", "Colour")]
     public partial class SettingsViewModel : ObservableObject
     {
+        public SettingsViewModel(IAudioManager audioManager)
+        {
+
+           
+            this.audioManager = audioManager;
+
+            //var username= UserDetails.Username;
+            //UserName = "Welcome back "+ username;
+            //Console.WriteLine(User);
+        }
+        private readonly IAudioManager audioManager;
         [ObservableProperty]
         string id;
         [ObservableProperty]
@@ -23,8 +35,11 @@ namespace _6002CEM2.ViewModel
         Color backgroundcolour;
         public async void Load()
         {
+           
+            var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("Rick_Astley_-_Never_Gonna_Give_You_Up_Video.m4a"));
+            player.Play();
             Backgroundcolour = Color.FromRgba(Colour);
-
+            
         }
         [RelayCommand]
         async void ChangeColour()

@@ -1,7 +1,7 @@
 ﻿
-using Android.Gms.Auth.Api.SignIn.Internal;
-using Android.Gms.Common.Api.Internal;
-using Android.Util;
+//using Android.Gms.Auth.Api.SignIn.Internal;
+//using Android.Gms.Common.Api.Internal;
+//using Android.Util;
 //using Java.Lang;
 //using Javax.Security.Auth;
 using SQLite;

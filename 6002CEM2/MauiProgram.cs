@@ -1,5 +1,7 @@
 ﻿using _6002CEM2.ViewModel;
+using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
+using Plugin.Maui.Audio;
 
 namespace _6002CEM2;
 
@@ -10,7 +12,8 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
-			.UseMauiMaps()
+            .UseMauiCommunityToolkitMediaElement()
+            .UseMauiMaps()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -43,6 +46,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<SettingsViewModel>();
         builder.Services.AddSingleton<NoteViewModel>();
         builder.Services.AddSingleton<Note>();
+        builder.Services.AddSingleton(AudioManager.Current);
         return builder.Build();
 	}
 }

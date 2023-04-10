@@ -10,6 +10,7 @@ namespace _6002CEM2
         public string Note { get; set; }
         public int Loc { get; set; }
         public int group { get; set; }
+        public string Music { get; set; }
     }
     public class Group
     {

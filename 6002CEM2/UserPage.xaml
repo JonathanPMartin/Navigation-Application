@@ -21,6 +21,10 @@
                 Text="Notes"
                 Command="{Binding SetNoteCommand}"
                 />
+            <Button Text="Music"
+                     Grid.Row="7"
+                 Grid.Column="1"  
+                     Command="{Binding GoMusicCommand}"/>
             <Button
                 Grid.Row="8"
                 Grid.Column="1" 

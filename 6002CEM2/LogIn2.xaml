@@ -6,7 +6,7 @@
              x:DataType="viewmodel:LogIn2ViewModel">
 
     <Frame>
-        <Grid>
+        <Grid BackgroundColor="black">
             <Label Text="Login Page"
                    Grid.Column="1"
                    Grid.Row="2"/>
@@ -26,6 +26,7 @@
                 Grid.Column="1"
                 
                  Placeholder="Password:"
+                IsPassword="True"
                 />
          
             <Button Text="Login"

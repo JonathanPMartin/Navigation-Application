@@ -331,6 +331,12 @@
         <member name="P:_6002CEM2.ViewModel.UserPageViewModel.LoadCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.UserPageViewModel.Load"/>.</summary>
         </member>
+        <member name="F:_6002CEM2.ViewModel.UserPageViewModel.goMusicCommand">
+            <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.UserPageViewModel.GoMusicCommand"/>.</summary>
+        </member>
+        <member name="P:_6002CEM2.ViewModel.UserPageViewModel.GoMusicCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:_6002CEM2.ViewModel.UserPageViewModel.GoMusic"/>.</summary>
+        </member>
         <member name="F:_6002CEM2.ViewModel.UserPageViewModel.groupLoadCommand">
             <summary>The backing field for <see cref="P:_6002CEM2.ViewModel.UserPageViewModel.GroupLoadCommand"/>.</summary>
         </member>

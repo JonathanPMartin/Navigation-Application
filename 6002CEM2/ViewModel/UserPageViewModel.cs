@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Plugin.Maui.Audio;
 using System.Collections.ObjectModel;
 
 namespace _6002CEM2.ViewModel
@@ -12,15 +13,16 @@ namespace _6002CEM2.ViewModel
     public partial class UserPageViewModel : ObservableObject
     {
 
-        public UserPageViewModel() {
+        public UserPageViewModel(IAudioManager audioManager) {
 
             userName = "Welcome back" + id;
+            this.audioManager = audioManager;
 
             //var username= UserDetails.Username;
             //UserName = "Welcome back "+ username;
             //Console.WriteLine(User);
         }
-       
+        private readonly IAudioManager audioManager;
         [RelayCommand]
         async Task Load()
         {
@@ -36,9 +38,21 @@ namespace _6002CEM2.ViewModel
         public async void LoadTest()
         {
 
-
+           
+            
             var user = await SQLService.GetUser(Int32.Parse(id));
             int locID = user.Loc;
+            if (user.Music == null) {
+                var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("The_Wombles_-_The_Wombling_Song.m4a"));
+                player.Play();
+               
+            }
+            else
+            {
+                var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(user.Music));
+                player.Play();
+            }
+           
             var loc = await SQLService.GetLocation(locID);
             GeolocationRequest request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
             Backgroundcolour = Color.FromRgba(colour);
@@ -57,6 +71,26 @@ namespace _6002CEM2.ViewModel
             UserName = "Welcome Back " + user.Username;
             ButtonName = Colour;
             Usernote = "User Note: " + user.Note;
+           
+        }
+        [RelayCommand]
+        async void GoMusic()
+        {
+            var user = await SQLService.GetUser(Int32.Parse(id));
+            if (user.Music == "Rick_Astley_-_Never_Gonna_Give_You_Up_Video.m4a")
+            {
+               
+                user.Music =null;
+                await SQLService.UpdateUser(user);
+            }
+            else
+            {
+               
+               // user.Music = "The_Wombles_ - _The_Wombling_Song.m4a";
+                user.Music = "Rick_Astley_-_Never_Gonna_Give_You_Up_Video.m4a";
+                await SQLService.UpdateUser(user);
+            }
+
         }
         [RelayCommand]
         async Task GroupLoad()
@@ -135,6 +169,7 @@ namespace _6002CEM2.ViewModel
                 });
             */
         }
+        
         [ObservableProperty]
         string id;
         [ObservableProperty]

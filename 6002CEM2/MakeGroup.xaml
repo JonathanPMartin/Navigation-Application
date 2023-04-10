@@ -12,7 +12,8 @@
                     Grid.Column="1" Grid.Row="3"/>
             <Entry   Text="{Binding GroupPassword}"
                 Placeholder="Group Pass:"
-                     Grid.Column="1" Grid.Row="4"/>
+                     Grid.Column="1" Grid.Row="4"
+                     IsPassword="True"/>
             <Entry  Text="{Binding GroupPassword2}"
                 Placeholder="Repeat Pass:" Grid.Column="1" Grid.Row="5"/>
             <Button Text="Done" Grid.Column="1" Grid.Row="7" Command="{Binding makegroupCommand}"/>
