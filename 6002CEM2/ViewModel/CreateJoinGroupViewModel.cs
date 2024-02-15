@@ -91,34 +91,8 @@ namespace _6002CEM2.ViewModel
         Color backgroundcolour;
         [ObservableProperty]
         string colour;
-        //data 
-        //data 
-        //data 
-        //data 
-        //more data that does shit  //data 
-        //data 
-        //data 
-        //data 
-        //data 
-        //data 
-        //data 
-        //data 
-        //more data that does shit  //data 
-        //data 
-        //data 
-        //more data that does shit
-        //more data that does shit
-        //more data that does shit
-        //more data that does shit
-        //more data that does shit
-        //more data that does shit
-        //more data that does shit
-        //more data that does shit
-        //more data that does shit
-        //more data that does shit
-        //more data that does shit
-        //more data that does shit
-        //more data that does shit
+        // end of text
+       
     }
 
 }
