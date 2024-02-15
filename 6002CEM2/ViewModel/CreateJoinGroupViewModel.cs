@@ -29,7 +29,7 @@ namespace _6002CEM2.ViewModel
             }
             Backgroundcolour = Color.FromRgba(Colour);
             //data 
-            //more data that does shit
+            //sets background colour used to go from white to black or vis versa
 
         }
         [RelayCommand]
