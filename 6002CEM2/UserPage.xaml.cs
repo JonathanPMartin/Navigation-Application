@@ -6,7 +6,7 @@ public partial class UserPage : ContentPage
 {
     protected override void OnAppearing()
     {
-        //data is a tad slow but is updating kinda
+        //work arround used to upated data 
         base.OnAppearing();
         ((UserPageViewModel)BindingContext).LoadTest();
     }
